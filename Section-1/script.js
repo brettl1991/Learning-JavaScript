@@ -83,20 +83,48 @@ console.log(ageJonas, ageSarah);
 // console.log(x);
 
 //comparison operators
-console.log(ageJonas > ageSarah); //true
-//we have < > <= >=
-console.log(ageSarah >= 18);
+// console.log(ageJonas > ageSarah); //true
+// //we have < > <= >=
+// console.log(ageSarah >= 18);
 
-const isFullAge = ageSarah >= 18;
+// const isFullAge = ageSarah >= 18;
 
-console.log(now - 1991 > - 2018);
+// console.log(now - 1991 > - 2018);
 
-//Operator presedence: which operator executed
+// //Operator presedence: which operator executed
 
-let x, y;
-x = y = 25-10-5; //x = y=10, x=10 because first gonna do the mathematical from right to left than from left to right the equal (assignment)
-console.log(x, y);
+// let x, y;
+// x = y = 25-10-5; //x = y=10, x=10 because first gonna do the mathematical from right to left than from left to right the equal (assignment)
+// console.log(x, y);
 
-//avarage of 2 values
-const avarageAge = (ageJonas + ageSarah) / 2;
-console.log(avarageAge); //55.5
+// //avarage of 2 values
+// const avarageAge = (ageJonas + ageSarah) / 2;
+// console.log(avarageAge); //55.5
+
+//----------------------------------------------------------------------------------------
+//Strings and Template literals
+const firstName = "Agnes";
+const job = "Receptionist";
+const birthYear = 1991;
+const year = 2037;
+
+const agnes =
+  "I'm " + firstName + ", a " + (year - birthYear) + " years old " + job + "!";
+console.log(agnes);
+
+//using template string
+
+const agnesNew = `I'm ${firstName}, a ${year - birthYear} year old ${job}!`;
+console.log(agnesNew);
+
+//Backsticks
+console.log(`Just a regular string...`);
+
+//Multiline strings
+console.log("String with \n\
+multiple \n\
+lines"); //with template strings this is easier:
+
+console.log(`String
+multiple
+lines`);
