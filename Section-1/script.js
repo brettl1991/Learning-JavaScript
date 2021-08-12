@@ -67,20 +67,20 @@ const ageJonas = now - 1991;
 const ageSarah = now - 2018;
 console.log(ageJonas, ageSarah);
 
-console.log(ageJonas * 2, ageJonas / 10, 2 ** 3);
+// console.log(ageJonas * 2, ageJonas / 10, 2 ** 3);
 //2 ** 3 means 2 to the powerof 3 so = 2 * 2 * 2
 
-const firstName = 'Jonas';
-const lastName = 'Brettl';
-console.log(firstName + ' ' + lastName);
+// const firstName = 'Jonas';
+// const lastName = 'Brettl';
+// console.log(firstName + ' ' + lastName);
 
-//assigmnet operator
-let x = 10 + 5; //15
-x += 10; //x = x + 10 = 25
-x *= 4; //x=x*4 = 100
-x++; //x = x +1 = 101
-x--; //x = x - 1 = 100
-console.log(x);
+// //assigmnet operator
+// let x = 10 + 5; //15
+// x += 10; //x = x + 10 = 25
+// x *= 4; //x=x*4 = 100
+// x++; //x = x +1 = 101
+// x--; //x = x - 1 = 100
+// console.log(x);
 
 //comparison operators
 console.log(ageJonas > ageSarah); //true
@@ -90,3 +90,13 @@ console.log(ageSarah >= 18);
 const isFullAge = ageSarah >= 18;
 
 console.log(now - 1991 > - 2018);
+
+//Operator presedence: which operator executed
+
+let x, y;
+x = y = 25-10-5; //x = y=10, x=10 because first gonna do the mathematical from right to left than from left to right the equal (assignment)
+console.log(x, y);
+
+//avarage of 2 values
+const avarageAge = (ageJonas + ageSarah) / 2;
+console.log(avarageAge); //55.5
