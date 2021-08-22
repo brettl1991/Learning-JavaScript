@@ -131,7 +131,7 @@
 
 //---------------------------------------------------------------------------------------
 
-//Drivin licence age check calc
+//Driving licence age check calc
 
 // const age = 15;
 
@@ -142,7 +142,7 @@
 //   console.log(`Sarah is too young. Wait another ${yearsLeft} years :)`);
 // }
 
-//so inside this () if the condition tru than after inside { this} will be executed
+//so inside this () if the condition true than after inside { this} will be executed
 //with else inside {this } will be executed if false the condition above
 
 // const birthYear = 2012;
@@ -164,14 +164,14 @@
 
 //Type conversion
 // const inputYear = "1991";
-// console.log(inputYear + 18); //getting back 199118 not 2019, so first need to conbert the string into a number
+// console.log(inputYear + 18); //getting back 199118 not 2019, so first need to convert the string into a number
 // console.log(Number(inputYear) + 18);
 
 // console.log(Number("Jonas")); //NaN - means not a number, invalid number
 
 // //Type coercion
 // console.log("I am " + 23 + " years old"); //the + operators will convert numbers into strings
-// console.log("23" - "10" - 3); //with minus operator strings converted to numbers (10)
+// console.log("23" - "10" - 3); //with minus operator converts strings to numbers (10)
 // //but if we use + than converting the whole into string 23193
 // console.log("23" * "2"); //46 converting into number
 // console.log("23" / "2"); //11.5 converting into number
@@ -186,23 +186,23 @@
 // Falsy values are values that are not exactly false but will become false when we try to convert them into a boolean
 //5 falsy values: 0, '', undefinden, null, NaN
 
-console.log(Boolean(0)); //fals
-console.log(Boolean(undefined)); //false
-console.log(Boolean("Jonas")); //true
-console.log(Boolean({})); //true
-console.log(Boolean("")); //false
+// console.log(Boolean(0)); //false
+// console.log(Boolean(undefined)); //false
+// console.log(Boolean("Jonas")); //true
+// console.log(Boolean({})); //true
+// console.log(Boolean("")); //false
 
-const money = 0;
-if (money) {
-  //no matter what is inside( ) javas will convert it to a boolean using the truthy and falsy rules
-  console.log("Dont spend it all ;)");
-} else {
-  console.log("You should get a job"); //this will be executed
-}
+// const money = 0;
+// if (money) {
+//   //no matter what is inside( ) javascript will convert it to a boolean using the truthy and falsy rules
+//   console.log("Dont spend it all ;)");
+// } else {
+//   console.log("You should get a job"); //this will be executed
+// }
 
-let height;
-if (height) {
-  console.log("Yaaay! Height is defined");
-} else {
-  console.log("Height is undefined :("); //this will be executed
-}
+// let height;
+// if (height) {
+//   console.log("Yaaay! Height is defined");
+// } else {
+//   console.log("Height is undefined :("); //this will be executed
+// }
