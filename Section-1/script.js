@@ -61,11 +61,11 @@
 
 //-------------------------------------------------------------------------------------
 //Basic Operators allows us to transform values or combine values
-//Mathematical, aritmethical operators
-const now = 2037;
-const ageJonas = now - 1991;
-const ageSarah = now - 2018;
-console.log(ageJonas, ageSarah);
+// //Mathematical, aritmethical operators
+// const now = 2037;
+// const ageJonas = now - 1991;
+// const ageSarah = now - 2018;
+// console.log(ageJonas, ageSarah);
 
 // console.log(ageJonas * 2, ageJonas / 10, 2 ** 3);
 //2 ** 3 means 2 to the powerof 3 so = 2 * 2 * 2
@@ -103,28 +103,55 @@ console.log(ageJonas, ageSarah);
 
 //----------------------------------------------------------------------------------------
 //Strings and Template literals
-const firstName = "Agnes";
-const job = "Receptionist";
-const birthYear = 1991;
-const year = 2037;
+// const firstName = "Agnes";
+// const job = "Receptionist";
+// const birthYear = 1991;
+// const year = 2037;
 
-const agnes =
-  "I'm " + firstName + ", a " + (year - birthYear) + " years old " + job + "!";
-console.log(agnes);
+// const agnes =
+//   "I'm " + firstName + ", a " + (year - birthYear) + " years old " + job + "!";
+// console.log(agnes);
 
 //using template string
 
-const agnesNew = `I'm ${firstName}, a ${year - birthYear} year old ${job}!`;
-console.log(agnesNew);
+// const agnesNew = `I'm ${firstName}, a ${year - birthYear} year old ${job}!`;
+// console.log(agnesNew);
 
-//Backsticks
-console.log(`Just a regular string...`);
+// //Backsticks
+// console.log(`Just a regular string...`);
 
-//Multiline strings
-console.log("String with \n\
-multiple \n\
-lines"); //with template strings this is easier:
+// //Multiline strings
+// console.log("String with \n\
+// multiple \n\
+// lines"); //with template strings this is easier:
 
-console.log(`String
-multiple
-lines`);
+// console.log(`String
+// multiple
+// lines`);
+
+//---------------------------------------------------------------------------------------
+
+//Drivin licence age check calc
+
+// const age = 15;
+
+// if (age >= 18) {
+//   console.log("Sarah can start driving licence 🚗");
+// } else {
+//   const yearsLeft = 18 - age;
+//   console.log(`Sarah is too young. Wait another ${yearsLeft} years :)`);
+// }
+
+//so inside this () if the condition tru than after inside { this} will be executed
+//with else inside {this } will be executed if false the condition above
+
+const birthYear = 2012;
+let century;
+
+if (birthYear <= 2000) {
+  century = 20;
+} else {
+  century = 21;
+}
+
+console.log(century);
