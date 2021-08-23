@@ -206,3 +206,44 @@
 // } else {
 //   console.log("Height is undefined :("); //this will be executed
 // }
+
+//----------------------------------------------------------------------------------------------
+//Equality Operators
+
+const age = 18;
+if(age === 18) console.log('You just become an adult (strict):D'); //dont confuse = equal to === this comparison operator
+//=== strict equality operator, it does not perform type coersion, returns true when both vales exact the same
+//so when comparing values use strict equality operator
+//so '18' === 18 going to be false
+
+// //== loose equality opertaor which does type coersion '18' == 18 will give true, avoide to use this one as much as you can
+// if(age == 18) console.log('You just become an adult (loose):D');
+
+// const favourite = Number(prompt("What's your favourite number?"));
+// console.log(favourite)//here we getting a number as a string back
+
+// if(favourite == 23) {
+//     console.log('Cool! 23 is an amazing number.')//this will convert it to a number
+// }
+
+// if(favourite === 23) {
+//     console.log('Cool! 23 is an amazing number.')//this will not giving back any message as first we need to convert it to a number
+//     //just by adding number in fron tof prompt above
+// }   else if(favourite === 7) {
+//     console.log('7 is also a cool number!')
+// }   else {
+//     console.log('Number is not 23 or 7')
+// }
+
+// if(favourite !== 23) {
+//     console.log('Why not the 23?') //this is the different operator, just make sure to use the strict version
+// }
+
+
+
+
+
+
+
+
+
