@@ -210,9 +210,9 @@
 //----------------------------------------------------------------------------------------------
 //Equality Operators
 
-const age = 18;
-if(age === 18) console.log('You just become an adult (strict):D'); //dont confuse = equal to === this comparison operator
-//=== strict equality operator, it does not perform type coersion, returns true when both vales exact the same
+// const age = 18;
+// if(age === 18) console.log('You just become an adult (strict):D'); //dont confuse = equal to === this comparison operator
+// //=== strict equality operator, it does not perform type coersion, returns true when both vales exact the same
 //so when comparing values use strict equality operator
 //so '18' === 18 going to be false
 
