@@ -4,21 +4,21 @@
 // let continent = "Europe";
 // console.log(continent);
 
-let population = 10;
-// console.log(population);
+// let population = 10;
+// // console.log(population);
 
-// let isIsland = false;
-let language;
-// console.log(typeof isIsland);
-// console.log(typeof population);
-// console.log(typeof country);
-// console.log(typeof language);
+// // let isIsland = false;
+// let language;
+// // console.log(typeof isIsland);
+// // console.log(typeof population);
+// // console.log(typeof country);
+// // console.log(typeof language);
 
-language = "hungarian";
-const country = "Hungary";
-const continent = "Europe";
-const isIsland = false;
-// isIsland = true;
+// language = "hungarian";
+// const country = "Hungary";
+// const continent = "Europe";
+// const isIsland = false;
+// // isIsland = true;
 
 //Basic Operators
 // console.log(population / 2);
@@ -41,18 +41,34 @@ const isIsland = false;
 // console.log(description2);
 
 //Taking Decisions: if / else Statements
-let avarage = 33 - population;
-console.log(avarage);
+// let avarage = 33 - population;
+// console.log(avarage);
 
-if (population > 33) {
-  console.log(`${country} population is above avarage.`);
+// if (population > 33) {
+//   console.log(`${country} population is above avarage.`);
+// } else {
+//   console.log(`${country} population is ${avarage} million below avarage.`);
+// }
+
+// //Type Conversion and Coercion
+// console.log("9" - "5"); //4
+// console.log("19" - "13" + "17"); // 617
+// console.log("19" - "13" + 17); //23
+// console.log("123" < 57); // false
+// console.log(5 + 6 + "4" + 9 - 4 - 2); //1143
+
+//Equality Operators: == vs. ===
+
+const numNeighbours = Number(
+  prompt("How many neighbour countries does your country have?")
+);
+
+console.log(numNeighbours);
+
+if (numNeighbours === 1) {
+  console.log("Only 1 border!");
+} else if (numNeighbours > 1) {
+  console.log("More than 1 border");
 } else {
-  console.log(`${country} population is ${avarage} million below avarage.`);
+  console.log("No borders");
 }
-
-//Type Conversion and Coercion
-console.log("9" - "5"); //4
-console.log("19" - "13" + "17"); // 617
-console.log("19" - "13" + 17); //23
-console.log("123" < 57); // false
-console.log(5 + 6 + "4" + 9 - 4 - 2); //1143
