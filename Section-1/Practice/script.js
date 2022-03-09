@@ -15,7 +15,7 @@ let language;
 // console.log(typeof language);
 
 language = "hungarian";
-const country = "United Kingdom";
+const country = "Hungary";
 const continent = "Europe";
 const isIsland = false;
 // isIsland = true;
@@ -26,12 +26,16 @@ population++;
 console.log(population);
 console.log(population > 6);
 console.log(population < 33);
-const description1 =
-  country +
-  " is in " +
-  continent +
-  ", and its " +
-  population +
-  " million people speak " +
-  language;
-console.log(description1);
+// const description1 =
+//   country +
+//   " is in " +
+//   continent +
+//   ", and its " +
+//   population +
+//   " million people speak " +
+//   language;
+// console.log(description1);
+
+//Strings and Template Literals
+const description2 = `${country} is in ${continent}, and it's ${population} million people speak ${language}.`;
+console.log(description2);
