@@ -9,16 +9,6 @@
 // let firstName = "Jonas";
 // console.log(firstName);
 
-// //Exercise
-// let country = "Hungary";
-// console.log(country);
-
-// let continent = "Europe";
-// console.log(continent);
-
-// let population = 10000000;
-// console.log(population);
-
 // ------------------------------------------------------------------------
 
 /*Data types*/
