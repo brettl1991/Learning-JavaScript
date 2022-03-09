@@ -99,7 +99,7 @@
 
 // //avarage of 2 values
 // const avarageAge = (ageJonas + ageSarah) / 2;
-// console.log(avarageAge); //55.5
+// console.log(avarageAge); //32.5
 
 //----------------------------------------------------------------------------------------
 //Strings and Template literals
@@ -238,12 +238,3 @@
 // if(favourite !== 23) {
 //     console.log('Why not the 23?') //this is the different operator, just make sure to use the strict version
 // }
-
-
-
-
-
-
-
-
-
