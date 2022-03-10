@@ -230,23 +230,66 @@
 // }
 
 //Logical operators
-const hasDriversLicence = true; //A variable
-const hasGoodVision = true; //B variable
-console.log(hasDriversLicence && hasGoodVision); //and operator && result true
-console.log(hasDriversLicence || hasGoodVision); //or operator || result true
-console.log(!hasDriversLicence); //not operator  result false
+// const hasDriversLicence = true; //A variable
+// const hasGoodVision = true; //B variable
+// console.log(hasDriversLicence && hasGoodVision); //and operator && result true
+// console.log(hasDriversLicence || hasGoodVision); //or operator || result true
+// console.log(!hasDriversLicence); //not operator  result false
 
-// if (hasDriversLicence && hasGoodVision) {
+// // if (hasDriversLicence && hasGoodVision) {
+// //   console.log("Sarah is able to drive");
+// // } else {
+// //   console.log("Someone else should drive...");
+// // }
+
+// const isTired = true; //C variable
+// console.log(hasDriversLicence || hasGoodVision || isTired);
+
+// if (hasDriversLicence && hasGoodVision && !isTired) {
 //   console.log("Sarah is able to drive");
 // } else {
 //   console.log("Someone else should drive...");
 // }
 
-const isTired = true; //C variable
-console.log(hasDriversLicence || hasGoodVision || isTired);
+//THE SWITCH STATEMENT
 
-if (hasDriversLicence && hasGoodVision && !isTired) {
-  console.log("Sarah is able to drive");
-} else {
-  console.log("Someone else should drive...");
+const day = "monday";
+
+switch (day) {
+  case "monday": //day === 'monday'
+    console.log("Plan course structure");
+    console.log("Go to cooding meetup");
+    break;
+  case "tuesday":
+    console.log("Prepare theory videos");
+    break;
+  case "wednesday":
+  case "thursday":
+    console.log("Writing code examples");
+    break;
+  case "friday":
+    console.log("Record videos");
+    break;
+  case "saturday":
+  case "sunday":
+    console.log("Enjoy the weekend");
+    break;
+  default:
+    console.log("Not a valid day!");
 }
+
+//write the above in logical operator
+if (day === "monday") {
+  console.log("Plan course structure");
+  console.log("Go to cooding meetup");
+} else if (day === "tuesday") {
+  console.log("Prepare theory videos");
+} else if (day === "wednesday" || day === "thursday") {
+  console.log("Writing code examples");
+} else if (day === "thursday") {
+  console.log("Writing code examples");
+} else if (day === "friday") {
+  console.log("Record videos");
+} else if (day === "saturday" || day === "sunday") {
+  console.log("Enjoy the weekend");
+} else console.log("Not a valid day!");
