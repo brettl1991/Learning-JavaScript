@@ -299,6 +299,30 @@
 // 3 + 4 or 1991 or true && !false && false
 //The statement is a bigger piece of code that excecudted and does not produce a value
 
-if (23 > 10) {
-  const str = "23 is bigger";
+// if (23 > 10) {
+//   const str = "23 is bigger";
+// }
+
+//THE CONDITIONAL (TERNARY) OPERATOR
+//something similar like if else statemant but all in one line, has 3 parts (condition, if part, else part), mostly for quick decision but for
+//more conditions we still you if else statement
+
+const age = 23;
+// age >= 18
+//   ? console.log("I like to drink wine😁")
+//   : console.log("I like to drink water 😊");
+
+const drink = age >= 18 ? "wine😁" : "water😊";
+console.log(drink);
+
+//with if else:
+
+let drink2;
+if (age >= 18) {
+  drink2 = "wine";
+} else {
+  drink2 = "water";
 }
+console.log(drink2);
+
+console.log(`I like to drink ${age >= 18 ? "wine😁" : "water😊"}`);
