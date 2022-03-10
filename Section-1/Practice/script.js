@@ -75,13 +75,36 @@
 
 //Logical operators
 
-const country = "Hungary";
-const language = "hunagrian";
-const population = 10;
-const isIsland = false;
+// const country = "Hungary";
+// const language = "hunagrian";
+// const population = 10;
+// const isIsland = false;
 
-if (language === "english" && population < 50 && isIsland === false) {
-  console.log(`You should live in ${country}`);
-} else {
-  console.log(`${country} does not meet your criteria😥.`);
+// if (language === "english" && population < 50 && isIsland === false) {
+//   console.log(`You should live in ${country}`);
+// } else {
+//   console.log(`${country} does not meet your criteria😥.`);
+// }
+
+//Switch statement
+const language = "hungarian";
+switch (language) {
+  case "chineese":
+  case "mandarin":
+    console.log("MOST number of native speakers!");
+    break;
+  case "spanish":
+    console.log("2nd place in number of native speakers");
+    break;
+  case "english":
+    console.log("3rd place");
+    break;
+  case "hindi":
+    console.log("Number 4");
+    break;
+  case "arabic":
+    console.log("5th most spoken language");
+    break;
+  default:
+    console.log("Great language too :D");
 }
