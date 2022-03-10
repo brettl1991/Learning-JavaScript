@@ -228,3 +228,25 @@
 // if(favourite !== 23) {
 //     console.log('Why not the 23?') //this is the different operator, just make sure to use the strict version
 // }
+
+//Logical operators
+const hasDriversLicence = true; //A variable
+const hasGoodVision = true; //B variable
+console.log(hasDriversLicence && hasGoodVision); //and operator && result true
+console.log(hasDriversLicence || hasGoodVision); //or operator || result true
+console.log(!hasDriversLicence); //not operator  result false
+
+// if (hasDriversLicence && hasGoodVision) {
+//   console.log("Sarah is able to drive");
+// } else {
+//   console.log("Someone else should drive...");
+// }
+
+const isTired = true; //C variable
+console.log(hasDriversLicence || hasGoodVision || isTired);
+
+if (hasDriversLicence && hasGoodVision && !isTired) {
+  console.log("Sarah is able to drive");
+} else {
+  console.log("Someone else should drive...");
+}
