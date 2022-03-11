@@ -1,6 +1,8 @@
 "use strict";
 
 //a piece of code that we can reuse over and over again in our code
+
+// all functions works the same way: they are receive input data, transform data and output data
 //a variable can hold a value but the function can hold more lines of code
 //functions allow us to write more maintanable code, reusable code so we dont need to write it again and again, so we should keep our code DRY - means don't repeat yourself!
 //console.log also a function, built in function
@@ -16,7 +18,7 @@ logger();
 logger();
 logger();
 
-//parameters inside function(parameters) - these are variables that are specific only to this function and they will get defind when we call the function, represent the input date of this function
+//parameters inside function(parameters) - these are variables that are specific only to this function and they will get defind when we call the function, placeholders to receive input values
 function fruitProcessor(apples, oranges) {
   console.log(apples, oranges);
   const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
