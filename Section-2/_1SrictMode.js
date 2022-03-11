@@ -14,4 +14,4 @@ if (hasDriversLicense) console.log("I can drive");
 
 const interface = "Audio"; //get error message because of interface: Unexpected strict mode reserved word
 const private = 543; //it's also not going to work because of private reserved word
-const if = 23;//same
+// const if = 23;//same
