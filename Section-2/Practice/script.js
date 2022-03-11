@@ -31,13 +31,30 @@
 // console.log(germanyPopulation, portugalPopulation, finlandPopulation);
 
 //Arrow Functions
-const percentageOfWorld3 = (population, country) => {
-  return `${country} about ${
-    (population / 7900) * 100
-  }% of the world population.`;
+// const percentageOfWorld3 = (population, country) => {
+//   return `${country} about ${
+//     (population / 7900) * 100
+//   }% of the world population.`;
+// };
+
+// const germanyPopulation = percentageOfWorld3(83, "Germany");
+// const portugalPopulation = percentageOfWorld3(10, "Portugal");
+// const finlandPopulation = percentageOfWorld3(6, "Finland");
+// console.log(germanyPopulation, portugalPopulation, finlandPopulation);
+
+//Function calling other function
+const percentageOfWorld1 = function (population) {
+  return (population / 7900) * 100;
 };
 
-const germanyPopulation = percentageOfWorld3(83, "Germany");
-const portugalPopulation = percentageOfWorld3(10, "Portugal");
-const finlandPopulation = percentageOfWorld3(6, "Finland");
-console.log(germanyPopulation, portugalPopulation, finlandPopulation);
+const describePopulation = function (population, country) {
+  const percentage = percentageOfWorld1(population);
+  const description = `${country} has ${population} million people, which is about ${
+    (population / 7900) * 100
+  }% of the world.`;
+  console.log(description);
+};
+
+describePopulation(83, "Germany");
+describePopulation(10, "Portugal");
+describePopulation(6, "Finland");
