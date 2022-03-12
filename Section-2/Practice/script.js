@@ -60,19 +60,33 @@
 // describePopulation(6, "Finland");
 
 //Introduction to Arrays
-const populations = [83, 10, 6, 10];
-console.log(populations.length === 4);
+// const populations = [83, 10, 6, 10];
+// console.log(populations.length === 4);
 
-const percentageOfWorld1 = function (population) {
-  console.log(population);
-  return (population / 7900) * 100;
-};
+// const percentageOfWorld1 = function (population) {
+//   console.log(population);
+//   return (population / 7900) * 100;
+// };
 
-const percentages = [
-  percentageOfWorld1(populations[0]),
-  percentageOfWorld1(populations[1]),
-  percentageOfWorld1(populations[2]),
-  percentageOfWorld1(populations[3]),
-];
+// const percentages = [
+//   percentageOfWorld1(populations[0]),
+//   percentageOfWorld1(populations[1]),
+//   percentageOfWorld1(populations[2]),
+//   percentageOfWorld1(populations[3]),
+// ];
 
-console.log(percentages);
+// console.log(percentages);
+
+//Basic Array Operations (Methods)
+const neighbours = ["Spain", "Portugal", "Hunagry"];
+const newCountry = neighbours.push("Utopia");
+console.log(neighbours);
+neighbours.pop();
+console.log(neighbours);
+
+if (!neighbours.includes("Germany")) {
+  console.log(`Probably not a central Europian country`);
+}
+
+neighbours[0] = "Malaysia";
+console.log(neighbours);
