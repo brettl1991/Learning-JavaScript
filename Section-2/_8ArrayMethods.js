@@ -5,16 +5,15 @@
 const friends = ["Michael", "Steven", "Peter"];
 const newLength = friends.push("Jay");
 console.log(friends); //[ 'Michael', 'Steven', 'Peter', 'Jay' ]
-console.log(newLength); //4
+console.log(newLength); //4 when we put in a variable, getting back the number of elements in the new array
 
-//unshift method that adds element ti the begginning of the array
+//unshift method that adds element to the begginning of the array
 friends.unshift("John");
 console.log(friends);
 
 //methods to remove elements from the arary
 const popped = friends.pop(); //removes the last element of the array
-console.log;
-popped;
+console.log(popped);
 console.log(friends);
 
 friends.shift(); //removes the first element
