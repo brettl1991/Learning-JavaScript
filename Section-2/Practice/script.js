@@ -43,18 +43,36 @@
 // console.log(germanyPopulation, portugalPopulation, finlandPopulation);
 
 //Function calling other function
+// const percentageOfWorld1 = function (population) {
+//   return (population / 7900) * 100;
+// };
+
+// const describePopulation = function (population, country) {
+//   const percentage = percentageOfWorld1(population);
+//   const description = `${country} has ${population} million people, which is about ${
+//     (population / 7900) * 100
+//   }% of the world.`;
+//   console.log(description);
+// };
+
+// describePopulation(83, "Germany");
+// describePopulation(10, "Portugal");
+// describePopulation(6, "Finland");
+
+//Introduction to Arrays
+const populations = [83, 10, 6, 10];
+console.log(populations.length === 4);
+
 const percentageOfWorld1 = function (population) {
+  console.log(population);
   return (population / 7900) * 100;
 };
 
-const describePopulation = function (population, country) {
-  const percentage = percentageOfWorld1(population);
-  const description = `${country} has ${population} million people, which is about ${
-    (population / 7900) * 100
-  }% of the world.`;
-  console.log(description);
-};
+const percentages = [
+  percentageOfWorld1(populations[0]),
+  percentageOfWorld1(populations[1]),
+  percentageOfWorld1(populations[2]),
+  percentageOfWorld1(populations[3]),
+];
 
-describePopulation(83, "Germany");
-describePopulation(10, "Portugal");
-describePopulation(6, "Finland");
+console.log(percentages);
