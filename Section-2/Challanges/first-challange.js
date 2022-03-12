@@ -4,8 +4,8 @@
 // Data 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27
 const calcAvarage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
 
-const scoreeDolphin = calcAvarage(44, 23, 71);
-const scoreKoala = calcAvarage(65, 54, 49);
+let scoreeDolphin = calcAvarage(44, 23, 71);
+let scoreKoala = calcAvarage(65, 54, 49);
 console.log(scoreeDolphin, scoreKoala);
 
 const checkWinner = function (avarageDolphin, avarageKoala) {
@@ -19,3 +19,9 @@ const checkWinner = function (avarageDolphin, avarageKoala) {
 };
 
 console.log(checkWinner(scoreeDolphin, scoreKoala));
+
+//for test data 2 we need to use let by the scores up there to be able to change them like this below
+scoreeDolphin = calcAvarage(85, 54, 41);
+scoreKoala = calcAvarage(23, 34, 27);
+console.log(checkWinner(scoreeDolphin, scoreKoala));
+checkWinner(scoreeDolphin, scoreKoala);
