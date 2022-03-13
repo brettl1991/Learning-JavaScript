@@ -1,3 +1,4 @@
+"use strict";
 //Functions
 // function describeCountry(country, population, capitalCity) {
 //   return `${country} has ${population} million people, and it's capital city is ${capitalCity}.`;
