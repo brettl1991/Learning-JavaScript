@@ -93,6 +93,15 @@
 // console.log(neighbours);
 
 //Introduction to Objects
+// const myCountry = {
+//   country: "Hungary",
+//   capital: "Budapest",
+//   language: "hungarian",
+//   population: 10,
+//   neighbours: ["Austria", "Ukraine", "Romania", "Horwatska"],
+// };
+
+//Dot vs. Bracket Notation
 const myCountry = {
   country: "Hungary",
   capital: "Budapest",
@@ -100,3 +109,15 @@ const myCountry = {
   population: 10,
   neighbours: ["Austria", "Ukraine", "Romania", "Horwatska"],
 };
+
+//'Finland has 6 million finnish-speaking people, 3 neighbouring countries
+// and a capital called Helsinki.'
+
+console.log(
+  `${myCountry.country} has ${myCountry.population} million ${myCountry.language} people, ${myCountry.neighbours.length} neighboring countries and a capital called ${myCountry.capital}.`
+);
+
+myCountry.population += 2;
+console.log(myCountry.population);
+myCountry["population"] -= 2;
+console.log(myCountry.population);
