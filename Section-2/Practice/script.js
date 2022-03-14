@@ -79,15 +79,24 @@
 // console.log(percentages);
 
 //Basic Array Operations (Methods)
-const neighbours = ["Spain", "Portugal", "Hunagry"];
-const newCountry = neighbours.push("Utopia");
-console.log(neighbours);
-neighbours.pop();
-console.log(neighbours);
+// const neighbours = ["Spain", "Portugal", "Hunagry"];
+// const newCountry = neighbours.push("Utopia");
+// console.log(neighbours);
+// neighbours.pop();
+// console.log(neighbours);
 
-if (!neighbours.includes("Germany")) {
-  console.log(`Probably not a central Europian country`);
-}
+// if (!neighbours.includes("Germany")) {
+//   console.log(`Probably not a central Europian country`);
+// }
 
-neighbours[0] = "Malaysia";
-console.log(neighbours);
+// neighbours[0] = "Malaysia";
+// console.log(neighbours);
+
+//Introduction to Objects
+const myCountry = {
+  country: "Hungary",
+  capital: "Budapest",
+  language: "hungarian",
+  population: 10,
+  neighbours: ["Austria", "Ukraine", "Romania", "Horwatska"],
+};
