@@ -41,7 +41,7 @@ console.log(ages);
 //contineu is to exit the current iteration of the loop and continue to the next one, break is used to completaly terminate the whole loop
 //print out just strings:
 for (let i = 0; i < jonas.length; i++) {
-  if (typeof jonas[i] !== "string") continue; //this will exit so after this not going to be runned
+  if (typeof jonas[i] !== "string") continue; //this will exit than goes to the next one and if no more than after this not going to be runned the rest down below
 
   console.log(jonas[i], typeof jonas[i]);
 }

@@ -178,3 +178,5 @@ for (let i = 0; i < listOfNeighbours.length; i++) {
   )
     console.log(`Neighbour: ${listOfNeighbours[i][y]}`);
 }
+
+//The while Loop
