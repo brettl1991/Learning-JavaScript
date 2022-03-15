@@ -102,22 +102,49 @@
 // };
 
 //Dot vs. Bracket Notation
+// const myCountry = {
+//   country: "Hungary",
+//   capital: "Budapest",
+//   language: "hungarian",
+//   population: 10,
+//   neighbours: ["Austria", "Ukraine", "Romania", "Horwatska"],
+// };
+
+//'Finland has 6 million finnish-speaking people, 3 neighbouring countries
+// and a capital called Helsinki.'
+
+// console.log(
+//   `${myCountry.country} has ${myCountry.population} million ${myCountry.language} people, ${myCountry.neighbours.length} neighboring countries and a capital called ${myCountry.capital}.`
+// );
+
+// myCountry.population += 2;
+// console.log(myCountry.population);
+// myCountry["population"] -= 2;
+// console.log(myCountry.population);
+
+//Object Methods
 const myCountry = {
   country: "Hungary",
   capital: "Budapest",
   language: "hungarian",
   population: 10,
   neighbours: ["Austria", "Ukraine", "Romania", "Horwatska"],
+
+  describe: function () {
+    return `${this.country} has ${this.population} million ${this.language} people, ${this.neighbours.length} neighboring countries and a capital called ${this.capital}.`;
+  },
+
+  checkIsland: function () {
+    this.isIsland = this.neighbours.length === 0 ? true : false; //or
+    // this.isIsland = !Boolean(this.neighbours.length);
+  },
 };
 
-//'Finland has 6 million finnish-speaking people, 3 neighbouring countries
-// and a capital called Helsinki.'
+console.log(myCountry.describe());
+myCountry.checkIsland();
+console.log(myCountry);
 
-console.log(
-  `${myCountry.country} has ${myCountry.population} million ${myCountry.language} people, ${myCountry.neighbours.length} neighboring countries and a capital called ${myCountry.capital}.`
-);
-
-myCountry.population += 2;
-console.log(myCountry.population);
-myCountry["population"] -= 2;
-console.log(myCountry.population);
+// Add a method called 'checkIsland' to the 'myCountry' object. This
+// method will set a new property on the object, called 'isIsland'.
+// 'isIsland' will be true if there are no neighbouring countries, and false if
+// there are. Use the ternary operator to set the property.
