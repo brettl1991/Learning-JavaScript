@@ -9,7 +9,7 @@
 // console.log("Lifting weights repetation 8 🏋️‍♂️ ");
 // console.log("Lifting weights repetation 9 🏋️‍♂️ ");
 // console.log("Lifting weights repetation 10 🏋️‍♂️ ");
-// //insteda of this above we can write a one line code which will run over and over again util we stop it
+// //insted of this above we can write a one line code which will run over and over again util we stop it
 //for loop which has a counter, has 3 parts
 //first an initial value of a counter
 //second part is a logical condition that is evaluated before each iteration of the loop
