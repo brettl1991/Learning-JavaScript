@@ -155,24 +155,22 @@
 // }
 
 //Looping Arrays, Breaking and Continuing
-const populations = [83, 10, 6, 10];
+// const populations = [83, 10, 6, 10];
 
-const percentages2 = [];
-for (let i = 0; i < populations.length; i++) {
-  percentages2.push((populations[i] / 7900) * 100);
+// const percentages2 = [];
+// for (let i = 0; i < populations.length; i++) {
+//   percentages2.push((populations[i] / 7900) * 100);
+// }
+
+// console.log(percentages2);
+
+//Looping Backwards and Loops in Loops
+const listOfNeighbours = [
+  ["Canada", "Mexico"],
+  ["Spain"],
+  ["Norway", "Sweden", "Russia"],
+];
+for (let i = 0; i < listOfNeighbours.length; i++) {
+  for (let y = 0; y < listOfNeighbours[i].length; y++)
+    console.log(`Neighbour: ${listOfNeighbours[i][y]}`);
 }
-
-console.log(percentages2);
-// const percentageOfWorld1 = function (population) {
-//   console.log(population);
-//   return (population / 7900) * 100;
-// };
-
-// const percentages = [
-//   percentageOfWorld1(populations[0]),
-//   percentageOfWorld1(populations[1]),
-//   percentageOfWorld1(populations[2]),
-//   percentageOfWorld1(populations[3]),
-// ];
-
-// console.log(percentages);
