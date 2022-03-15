@@ -9,6 +9,8 @@
 // console.log("Lifting weights repetation 8 🏋️‍♂️ ");
 // console.log("Lifting weights repetation 9 🏋️‍♂️ ");
 // console.log("Lifting weights repetation 10 🏋️‍♂️ ");
+
+//Loops can execute a block of code as long as a specified condition is true.
 // //insted of this above we can write a one line code which will run over and over again util we stop it
 //for loop which has a counter, has 3 parts
 //first an initial value of a counter
