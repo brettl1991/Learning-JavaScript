@@ -14,7 +14,7 @@
 //first an initial value of a counter
 //second part is a logical condition that is evaluated before each iteration of the loop
 //so for loop keeps running while condition is TRUE
-//update the counter
+//third part update the counter
 for (let rep = 1; rep <= 10; rep++) {
   console.log(`Lifting weights repetation ${rep} 🏋️‍♂️ `);
 }
