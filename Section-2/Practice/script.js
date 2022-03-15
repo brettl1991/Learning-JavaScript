@@ -123,28 +123,33 @@
 // console.log(myCountry.population);
 
 //Object Methods
-const myCountry = {
-  country: "Hungary",
-  capital: "Budapest",
-  language: "hungarian",
-  population: 10,
-  neighbours: ["Austria", "Ukraine", "Romania", "Horwatska"],
+// const myCountry = {
+//   country: "Hungary",
+//   capital: "Budapest",
+//   language: "hungarian",
+//   population: 10,
+//   neighbours: ["Austria", "Ukraine", "Romania", "Horwatska"],
 
-  describe: function () {
-    return `${this.country} has ${this.population} million ${this.language} people, ${this.neighbours.length} neighboring countries and a capital called ${this.capital}.`;
-  },
+//   describe: function () {
+//     return `${this.country} has ${this.population} million ${this.language} people, ${this.neighbours.length} neighboring countries and a capital called ${this.capital}.`;
+//   },
 
-  checkIsland: function () {
-    this.isIsland = this.neighbours.length === 0 ? true : false; //or
-    // this.isIsland = !Boolean(this.neighbours.length);
-  },
-};
+//   checkIsland: function () {
+//     this.isIsland = this.neighbours.length === 0 ? true : false; //or
+//     // this.isIsland = !Boolean(this.neighbours.length);
+//   },
+// };
 
-console.log(myCountry.describe());
-myCountry.checkIsland();
-console.log(myCountry);
+// console.log(myCountry.describe());
+// myCountry.checkIsland();
+// console.log(myCountry);
 
 // Add a method called 'checkIsland' to the 'myCountry' object. This
 // method will set a new property on the object, called 'isIsland'.
 // 'isIsland' will be true if there are no neighbouring countries, and false if
 // there are. Use the ternary operator to set the property.
+
+//The for Loop
+for (let voter = 1; voter <= 50; voter++) {
+  console.log(`Voter number ${voter} is currently voting`);
+}
