@@ -305,7 +305,7 @@
 
 //THE CONDITIONAL (TERNARY) OPERATOR
 //something similar like if else statemant but all in one line, has 3 parts (condition, if part, else part), mostly for quick decision but for
-//more conditions we still you if else statement
+//more conditions we still use if else statement
 
 const age = 23;
 // age >= 18
