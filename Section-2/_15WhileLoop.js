@@ -18,3 +18,5 @@ while (dice !== 6) {
   dice = Math.trunc(Math.random() * 6) + 1;
   if (dice === 6) console.log("Loop is about to end...");
 }
+
+//while — loops through a block of code once; then the condition is evaluated. If the condition is true, the statement is repeated as long as the specified condition is true. for — loops through a block of code until the counter reaches a specified number.
