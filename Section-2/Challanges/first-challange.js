@@ -2,7 +2,9 @@
 
 // Data 1: Dolphins score 44, 23 and 71. Koalas score 65, 54 and 49
 // Data 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27
-const calcAvarage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+const calcAvarage = (score1, score2, score3) => {
+  score1 + score2 + score3 / 3;
+};
 
 let scoreeDolphin = calcAvarage(44, 23, 71);
 let scoreKoala = calcAvarage(65, 54, 49);
