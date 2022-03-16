@@ -23,7 +23,7 @@ const calcAverage = function (arr) {
   console.log(sum);
   return sum / arr.length;
 };
-console.log(calcAverage([2, 3, 7])); //12, here we test with or numbers
+console.log(calcAverage([2, 3, 7])); //12, here we test with our numbers
 
 //so we can use the function to calculate the avarage of the totals
 console.log(calcAverage(totals));
