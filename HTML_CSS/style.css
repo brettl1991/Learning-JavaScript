@@ -1,13 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: rgb(252, 252, 169);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
+  padding: 50px;
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 35px;
+  margin-bottom: 25px;
+}
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
 }
 
+p {
+  margin-bottom: 20px;
+}
 .first {
   color: red;
 }
@@ -15,4 +30,27 @@ h1 {
 #your-name {
   background-color: rgb(236, 201, 84);
   border: 5px solid #444;
+  width: 400px;
+  padding: 25px;
+  margin-top: 30px;
 }
+
+input,
+button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+#course-image {
+  width: 300px;
+}
+
+/* child selector */
+#your-name h2 {
+  color: olive;
+}
+/* content: ;text, images etc...
+padding: transparent area around the content, inside of the box
+border: goes aroud the padding and the content */
+/* margin: space between boxes */
+/* fill area: area that gets filled with bg color and bg img, but not the margin */ ;
