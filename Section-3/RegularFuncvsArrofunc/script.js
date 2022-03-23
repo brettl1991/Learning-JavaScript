@@ -47,4 +47,4 @@ var adArrow; = (a, b) => {
   return a + b
 }
 
-addExpression(2, 5, 8)//arguments keywords only exist in regular functions
+adArrow(2, 5, 8)//arguments keywords only exist in regular functions
