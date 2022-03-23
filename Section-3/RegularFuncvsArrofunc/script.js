@@ -42,7 +42,7 @@ const addExpression = function (a, b) {
 addExpression(2, 5)
 addExpression(2, 5, 8, 12)//we can pass more arguments;
 
-var adArrow; = (a, b) => a + b{
+var adArrow; = (a, b) => {
   console.log(arguments);
   return a + b
 }
