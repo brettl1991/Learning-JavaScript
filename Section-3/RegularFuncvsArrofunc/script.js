@@ -39,12 +39,12 @@ const addExpression = function (a, b) {
   return a + b;
 };
 
-addExpression(2, 5)
-addExpression(2, 5, 8, 12)//we can pass more arguments;
+addExpression(2, 5);
+addExpression(2, 5, 8, 12); //we can pass more arguments;
 
-var adArrow; = (a, b) => {
+var adArrow = (a, b) => {
   console.log(arguments);
-  return a + b
-}
+  return a + b;
+};
 
-adArrow(2, 5, 8)//arguments keywords only exist in regular functions
+adArrow(2, 5, 8); //arguments keywords only exist in regular functions
