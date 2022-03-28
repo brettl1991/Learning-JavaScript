@@ -33,7 +33,7 @@ console.log(main, secondary); //Vegetarian Italian
 
 //a function return an array and immediately destruct the result into different variables, so allow us to return multiple values from function
 //write a function to order food:adding method to the restaurant object
-const [starter, mainCourse] = restaurant.order(2, 0); //so we want element number to from the starterMenu, and 0 from the mainMenu
+const [starter, mainCourse] = restaurant.order(2, 0); //so we want element number 2 from the starterMenu, and 0 from the mainMenu
 console.log(starter, mainCourse); //Garlic Bread Pizza
 
 //what about if we have nested array? Nested destructuring
