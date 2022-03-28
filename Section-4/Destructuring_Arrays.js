@@ -27,7 +27,7 @@ console.log(x, y, z); //2 3 4
 let [main, , secondary] = restaurant.categories;
 console.log(main, secondary); //Italian Vegetarian
 
-//if we want to switch the variables
+//if we want to switch the variables, so basically mutating variables
 [main, secondary] = [secondary, main];
 console.log(main, secondary); //Vegetarian Italian
 
