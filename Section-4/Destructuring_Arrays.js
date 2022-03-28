@@ -1,6 +1,6 @@
 'use strict';
 
-//Destructuring arrays means, unpacking valuses from an array or an object into separate variables, break a complex data structure down into smaller data structure
+//Destructuring arrays means, unpacking values from an array or an object into separate variables, break a complex data structure down into smaller data structure
 const restaurant = {
   name: 'Classico Italiano',
   location: 'Via Angelo Tavanti 23, Firenze, Italy',
