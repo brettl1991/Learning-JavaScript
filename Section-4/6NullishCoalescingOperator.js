@@ -11,6 +11,6 @@ restaurant.numGuests = 0;
 const guests = restaurant.numGuests || 10;
 console.log(guests);
 
-//originally would be 10 as || operator will return true value but will nullish operator, which working with a concept of nullish values(null and undefined)
+//originally would be 10 as || operator will return true value but with nullish operator, which working with a concept of nullish values(null and undefined)
 const guestsCorrect = restaurant.numGuests ?? 10;
 console.log(guestsCorrect); //getting 0
