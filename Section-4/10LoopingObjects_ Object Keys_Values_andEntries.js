@@ -57,19 +57,19 @@ console.log(values);
 
 //entrie object
 const entries = Object.entries(openingHours);
-// console.log(entries);
+console.log(entries);
 // [
 //   [ 'thu', { open: 12, close: 22 } ],
 //   [ 'fri', { open: 11, close: 23 } ],
 //   [ 'sat', { open: 0, close: 24 } ]
 // ]
 for (const x of entries) {
-  console.log(x);
+  // console.log(x);
 }
 
-// [ 'thu', { open: 12, close: 22 } ]
-// [ 'fri', { open: 11, close: 23 } ]
-// [ 'sat', { open: 0, close: 24 } ]
+// 0: [ 'thu', { open: 12, close: 22 } ]
+// 1: [ 'fri', { open: 11, close: 23 } ]
+// 2: [ 'sat', { open: 0, close: 24 } ]
 
 //[key, value]
 
