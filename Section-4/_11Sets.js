@@ -1,5 +1,5 @@
 'use strict';
-//set datastructure: collection of unique values (so never can ahve duplicates)
+//set datastructure: collection of unique values (so never can have duplicates)
 // to create a new set: most common iterables that takes in is an [] array, can hold mixed datatypes
 
 const ordersSet = new Set([
