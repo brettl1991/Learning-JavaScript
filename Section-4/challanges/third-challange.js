@@ -23,8 +23,24 @@ gameEvents.delete(64);
 
 //3.
 
-const time = [...gameEvents.keys()].pop();
-console.log(time);
-console.log(
-  `An event happened, on average, every ${time / gameEvents.size} minutes`
-);
+// const time = [...gameEvents.keys()].pop();
+// console.log(time);
+// console.log(
+//   `An event happened, on average, every ${time / gameEvents.size} minutes`
+// );
+
+//4.
+for (const [key, value] of gameEvents) {
+  // console.log(key);
+  // console.log(value);
+  //first solution
+  // const currentTime =
+  //   key < 45
+  //     ? `[FIRST HALF] ${key}: ${value}`
+  //     : `[SECOND HALF] ${key}: ${value}`;
+  //     //second refactored solution
+  const currentTime2 = `${
+    key < 45 ? '[FIRST HALF]' : '[SECOND HALF]'
+  } ${key}: ${value}`;
+  console.log(currentTime2);
+}
