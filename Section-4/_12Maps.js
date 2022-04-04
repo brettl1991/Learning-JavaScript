@@ -41,8 +41,8 @@ console.log(rest.size); //7
 //we can use arrays and objects as mapkeys
 const arr = [1, 2];
 rest.set(arr, 'Test');
-rest.set;
-document.querySelector('h1', 'Heading'); //gonna get back an object: key and value
+console.log(rest);
+rest.set(document.querySelector('h1', 'Heading')); //gonna get back an object: key and value
 // {
 //   h1 => 'Heading';
 //   key: h1;
