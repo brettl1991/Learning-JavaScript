@@ -10,7 +10,7 @@ const newArr = [1, 2, ...arr]; //using spread operator to expand this array into
 console.log(newArr); //[ 1, 2, 7, 8, 9 ]
 
 //log the individual elements of the array
-console.log(...newArr);
+console.log(...newArr); //1 2 7 8 9
 
 const restaurant = {
   name: 'Classico Italiano',
