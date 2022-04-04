@@ -78,7 +78,7 @@ console.log(announcement.replace('door', 'gate')); //All passangers come to boar
 
 console.log(announcement.replace(/door/g, 'gate')); //g stands for global adn we replaced all: All passangers come to boarding gate 23. Boarding gate 23!
 
-//3 simple method that return booleans: includes, stratwith, endswith
+//3 simple method that return booleans: includes, startswith, endswith
 
 const planeNew = 'A320neo';
 console.log(planeNew.includes('A320')); //true
