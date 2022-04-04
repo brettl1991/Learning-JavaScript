@@ -57,7 +57,7 @@ const email = 'hello@jonas.io';
 const loginEmail = '  Hello@Jonas.Io \n';
 
 const lowerEmail = loginEmail.toLocaleLowerCase();
-const trimmedEmail = lowerEmail.trim();
+const trimmedEmail = lowerEmail.trim(); //remove all the whitespace both  ends of a string
 console.log(trimmedEmail); //hello@jonas.io
 
 //we can do this all in 1 step
@@ -76,7 +76,7 @@ const announcement =
 //change door to gate
 console.log(announcement.replace('door', 'gate')); //All passangers come to boarding gate 23. Boarding door 23! targeting just the firt word, and so to target all we need to use regular expression
 
-console.log(announcement.replace(/door/g, 'gate')); //g stands for global adn we replaced all: All passangers come to boarding gate 23. Boarding gate 23!
+console.log(announcement.replace(/door/g, 'gate')); //g stands for global and we replaced all: All passangers come to boarding gate 23. Boarding gate 23!
 
 //3 simple method that return booleans: includes, startswith, endswith
 
