@@ -16,5 +16,5 @@
 //when to use sets? when you need to work with unique values, when high-performance is really important, when you want to remove duplicates from arrays
 
 //when to use objects? when to use maps?
-//objects: more traditionalkey/value store, easier to write and access valueswith . and []. Use when you need to include functions(methods),or when working with JSON (can convert to map)
+//objects: more traditional key/value store, easier to write and access values with . and []. Use when you need to include functions(methods),or when working with JSON (can convert to map)
 //maps: better performance,keys can have any data type,easy to iterate,easy to compute size. Use when simply need to mapkey to values, or when you need keys that are not strings
