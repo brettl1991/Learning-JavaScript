@@ -4,9 +4,9 @@
 //create map
 const rest = new Map();
 rest.set('name', 'Classico Italiano'); //than we pass in arguments
-rest.set(1, 'Firenze', 'Italy');
+rest.set(1, 'Firenze');
 //to calling the set method like this not only update the map that is called on, but also returns the map
-console.log(rest.set(2, 'Lisbon', 'Portugal')); //Map(3) { 'name' => 'Classico Italiano', 1 => 'Firenze', 2 => 'Lisbon' }
+console.log(rest.set(2, 'Lisbon')); //Map(3) { 'name' => 'Classico Italiano', 1 => 'Firenze', 2 => 'Lisbon' }
 
 //to chain the next set, these update the map
 rest
