@@ -20,6 +20,8 @@ openingHours = {
 };
 
 //Starting
+
+//Object literals are used to create an object in javascript. With ES6 The object in javascript can be initialized by directly using the variable name.
 openingHours = {
   thu: {
     open: 12,
