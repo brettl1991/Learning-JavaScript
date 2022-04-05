@@ -32,6 +32,6 @@ for (const flight of flights.split('+')) {
   )} from ${getCode(from)} to ${getCode(to)} (${time.replace(
     ':',
     'h'
-  )})`.padStart(36); //align th text to the right
+  )})`.padStart(36); //align the text to the right
   console.log(output);
 }
