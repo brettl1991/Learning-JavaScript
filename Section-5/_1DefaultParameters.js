@@ -21,7 +21,7 @@ const createBooking = function (
 createBooking('LH123'); //{ flightNum: 'LH123', numPassangers: undefined, price: undefined } so now we know these are falsy values so we cn use short circuting above, so we getting back with those default values this: { flightNum: 'LH123', numPassangers: 1, price: 199 }
 
 createBooking('LH123', 2, 800); //{ flightNum: 'LH123', numPassangers: 2, price: 800 }
-//we can even pass an other parameters inside them
+//we can even pass an other parameters inside them, like above with price = numPassangers * 199
 createBooking('LH123', 5); //{ flightNum: 'LH123', numPassangers: 5, price: 995 }
 
 //if you want to leave any default by calling them, otherwise we can't skip a default parameter
