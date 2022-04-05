@@ -29,7 +29,7 @@ for (const flight of flights.split('+')) {
   const output = `${type.startsWith('_Delayed') ? '🔴' : ''}${type.replaceAll(
     '_',
     ' '
-  )} from ${getCode(from)} to ${getcode(to)} (${time.replace(
+  )} from ${getCode(from)} to ${getCode(to)} (${time.replace(
     ':',
     'h'
   )})`.padStart(36); //align th text to the right
