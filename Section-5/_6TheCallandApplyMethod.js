@@ -65,3 +65,52 @@ console.log(eurowings);
 //instead we use call
 
 book.call(eurowings, ...flightData); //George Cooper booked a seat on Eurowings flight EW583
+
+//bind method: not immediately call the function, instead returns a new function where the this keyword is bind
+
+//lets assume we need to use the book functuon for eurowings all the time
+//book.call(eurowings, 23, 'Sarah Williams');
+const bookEW = book.bind(eurowings);
+const bookLH = book.bind(lufthansa);
+bookEW(23, 'Steven Williams'); //Steven Williams booked a seat on Eurowings flight EW23
+
+//function for only 23 flight
+const bookEW23 = book.bind(eurowings, 23);
+bookEW23('Agnes Brettl'); //Agnes Brettl booked a seat on Eurowings flight EW23
+
+//other situation to use bind method
+//when we use objects together with eventlisteners
+//so whenever we click new plane button buy a new plane (html)
+lufthansa.planes = 300;
+lufthansa.buyPlane = function () {
+  console.log(this); //wil return: <button class="buy">Buy new plane 🛩</button> because this keyword in an event handler function always points to the element on which the element attached to
+  this.planes++;
+  console.log(this.planes); //get back NaN, because this keyword is the button element
+};
+
+// document.querySelector('.buy').addEventListener('click', lufthansa.buyPlane);
+//if we would call
+// lufthansa.buyPlane() than the lufthansa.buyPlane object would called the function, so we need to manually define this keyword
+document
+  .querySelector('.buy')
+  .addEventListener('click', lufthansa.buyPlane.bind(lufthansa)); //301 when we click on that button, this point to lufthansa
+
+//an other usecase for bind method: partial application(we can preset parameters)
+const addTax = (rate, value) => value + value * rate;
+console.log(addTax(0.1, 200)); //220
+
+//pre set the rate for always be 23%
+const addVAT = addTax.bind(null, 0.23); //same as we would write
+// const addVAT = value => value + value * 0.23;
+
+console.log(addVAT(100)); //123
+
+//challange:rewrite the above code by using a function returning an other function
+const addTaxRate = function (rate) {
+  return function (value) {
+    return value + value * rate;
+  };
+};
+
+const addVAT2 = addTaxRate(0.23);
+console.log(addVAT(100)); //123
