@@ -21,7 +21,7 @@ checkIn(flight, jonas);
 console.log(flight); //LH234, so did not changed to LH999
 console.log(jonas); ////{name: 'MrJonas Schmedtman', passport: 24739479284} and here changed the name and alert poped up 'Check in'
 
-//the flight is a primitive type as basically copied inside the function like flightNum = flight, but with jonas as this is an object and therefore reference type just the reference has been copied in to the object, but that reference itself still a value that contains a memory adress
+//the flight is a primitive type as basically copied inside the function like flightNum = flight, but with jonas as this is an object and therefore reference type just the reference has been copied in to the function, but that reference itself still a value that contains a memory adress
 
 const newPassport = function (person) {
   person.passport = Math.trunc(Math.random() * 1000000000);
