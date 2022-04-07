@@ -24,3 +24,44 @@ booker(); //2 passangers
 booker(); //3 passangers
 
 console.dir(booker); //to take a look into the function
+
+let f;
+let g = function () {
+  const a = 23;
+  f = function () {
+    console.log(a * 2);
+  };
+};
+
+const h = function () {
+  const b = 777;
+  f = function () {
+    console.log(b * 2);
+  };
+};
+
+g(); //
+f(); //46 (23*2)
+console.dir(f); //inside func the closure has a value
+
+//re assigned f function
+h(); //
+f(); ///1554
+console.dir(f); //inside func the closure has b value
+
+//example 2: timer
+const boardPassangers = function (n, wait) {
+  const perGroup = n / 3;
+
+  setTimeout(function () {
+    console.log(`We are now boarding all ${n} passangers`);
+    console.log(`There are 3 groups, each with ${perGroup} passangers`);
+  }, wait * 1000); //setTimeout need 2 parameters: a function which will be executed after a certain time, and the timer after will be called
+
+  console.log(`Will start in boarding in ${wait} seconds`);
+};
+
+const perGroup = 1000; //wont use it because closure has priority over the scopchain and func will use inside perGroup variable not this
+boardPassangers(180, 3); // Will start in boarding in 3 seconds
+// We are now boarding all 180 passangers
+// There are 3 groups, each with 60 passangers
