@@ -41,7 +41,7 @@ function calcAge(birthYear) {
   return 2037 - birthYear;
 }
 
-//Function expressions when a function valuestored in a variable
+//Function expressions when a function value stored in a variable
 const calcAge = function (birthYear) {
   return 2037 - birthYear;
 };
