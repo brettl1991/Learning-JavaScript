@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 // const yearsUntilRetirement = (birthYear, firstName) => {
 //   const age = 2037 - birthYear;
 //   const retirement = 65 - age;
@@ -32,7 +32,7 @@ const yearsUntilRetirement = function (birthYear, firstName) {
   }
 };
 
-console.log(yearsUntilRetirement(1950, "Jonas"));
+console.log(yearsUntilRetirement(1950, 'Jonas'));
 
 //3 types of functions we talked about
 
@@ -41,10 +41,10 @@ function calcAge(birthYear) {
   return 2037 - birthYear;
 }
 
-//Function expressions when a function valuestored ina  variable
+//Function expressions when a function valuestored in a variable
 const calcAge = function (birthYear) {
   return 2037 - birthYear;
 };
 
 //Arrow function, that great for a quick line function, has no this keyword
-const calcAge = (birthYear) => 2037 - birthYear;
+const calcAge = birthYear => 2037 - birthYear;
