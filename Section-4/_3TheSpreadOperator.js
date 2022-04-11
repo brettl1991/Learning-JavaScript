@@ -1,15 +1,15 @@
 'use strict';
-//placing all the array elements at one
+
 const arr = [7, 8, 9];
 //lets create a new array based on above but with some new elements in the beginning
 //not good soloion
 const badNewArray = [1, 2, arr[0], arr[1], arr[2]];
 console.log(badNewArray); //[ 1, 2, 7, 8, 9 ]
 
-const newArr = [1, 2, ...arr]; //using spread operator to expand this array into all of its individual elements
+const newArr = [1, 2, ...arr];
 console.log(newArr); //[ 1, 2, 7, 8, 9 ]
 
-//log the individual elements of the array, if we need values from an array individually use spread operator
+// if we need values from an array individually use spread operator
 console.log(...newArr); //1 2 7 8 9
 
 const restaurant = {
