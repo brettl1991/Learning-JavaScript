@@ -9,7 +9,7 @@ console.log(badNewArray); //[ 1, 2, 7, 8, 9 ]
 const newArr = [1, 2, ...arr]; //using spread operator to expand this array into all of its individual elements
 console.log(newArr); //[ 1, 2, 7, 8, 9 ]
 
-//log the individual elements of the array
+//log the individual elements of the array, if we need values from an array individually use spread operator
 console.log(...newArr); //1 2 7 8 9
 
 const restaurant = {
