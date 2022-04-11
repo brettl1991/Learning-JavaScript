@@ -56,7 +56,8 @@ const add = function (...numbers) {
 
 add(2, 3);
 add(5, 3, 7, 2);
-add(8, 2, 5, 3, 2, 1, 4); //getting back: [ 2, 3 ]
+add(8, 2, 5, 3, 2, 1, 4); //getting back for console.log(numbers) above:
+//[ 2, 3 ]
 // [ 5, 3, 7, 2 ]
 // [
 //   8, 2, 5, 3,
