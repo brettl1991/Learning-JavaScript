@@ -46,7 +46,7 @@ console.log(i, j, k); //2 5 6
 
 //default values
 // const [p, q, r] = [8, 9];
-// console.log(p, q, r); //undedined
+// console.log(p, q, r); //undefined
 //but if we set default values
 const [p = 1, q = 1, r = 1] = [8, 9];
 console.log(p, q, r); //8 9 1
