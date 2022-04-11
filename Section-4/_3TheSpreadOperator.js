@@ -1,5 +1,5 @@
 'use strict';
-//pacing all the array elements at one
+//placing all the array elements at one
 const arr = [7, 8, 9];
 //lets create a new array based on above but with some new elements in the beginning
 //not good soloion
