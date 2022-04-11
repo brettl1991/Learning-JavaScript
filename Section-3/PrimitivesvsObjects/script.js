@@ -17,7 +17,7 @@ console.log('Friend: ', friend); //Friend:  Objectage: 27name: "jonas"[[Prototyp
 
 console.log('Me', me); //Me {name: 'jonas', age: 27} age: 27 name: "jonas" [[Prototype]]: Object
 
-//thats why we call objects reference types, because when we declare a variable as an object and identifier is created which points to a peace of memory in teh stack which in turn points to a piece of memeory in the heap, and that is where the object is stored not in the call stack where we can find just their refereence and this heap also has unlimited storage and also primitives stored in call stack
+//thats why we call objects reference types, because when we declare a variable as an object and identifier is created which points to a piece of memory in the stack which in turn points to a piece of memeory in the heap, and that is where the object is stored not in the call stack where we can find just their refereence and this heap also has unlimited storage and also primitives stored in call stack
 
 //and because we set the friend.age to 27 and the object can be found in the heap, that is teh reason getting 27 the me object as well
 //so with reference values the const rules which stands they are immutable, not relaible here
