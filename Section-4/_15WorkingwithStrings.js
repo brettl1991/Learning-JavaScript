@@ -31,7 +31,7 @@ console.log(airline.slice(1, -1)); //AP Air Portuga
 
 //we get an airplane seat and we need to log on to the console if it's a middle seat or not
 const checkMiddleSeat = function (seat) {
-  //B and E are middle seats, so we need to take last character and test if it's an A or B
+  //B and E are middle seats, so we need to take last character and test if it's an E or B
   const s = seat.slice(-1);
   if (s === 'B' || s === 'E') console.log('You got the middle seat🤷‍♂️');
   else console.log('You got lucky😎');
