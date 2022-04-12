@@ -6,7 +6,7 @@ const question = new Map([
   [2, 'Java'],
   [3, 'JavaScript'],
   ['correct', 3],
-  [true, 'correct'],
+  [true, 'correct✌'],
   [false, 'try again'],
 ]);
 
