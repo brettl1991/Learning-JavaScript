@@ -74,7 +74,7 @@ const announcement =
   'All passangers come to boarding door 23. Boarding door 23!';
 
 //change door to gate
-console.log(announcement.replace('door', 'gate')); //All passangers come to boarding gate 23. Boarding door 23! targeting just the firt word, and so to target all we need to use regular expression
+console.log(announcement.replace('door', 'gate')); //All passangers come to boarding gate 23. Boarding door 23! targeting just the first word, and to target all we need to use regular expression
 
 console.log(announcement.replace(/door/g, 'gate')); //g stands for global and we replaced all: All passangers come to boarding gate 23. Boarding gate 23!
 
