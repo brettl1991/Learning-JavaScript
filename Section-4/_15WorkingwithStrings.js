@@ -90,7 +90,7 @@ if (plane.startsWith('Airbus') && plane.endsWith('neo')) {
   console.log('Part of the new Airbus family.');
 } //not get logged as false
 
-//practicecheck if a luggage of a certain passanger is allowed to be in the plane
+//practice/ check if a luggage of a certain passanger is allowed to be in the plane
 const checkBaggage = function (items) {
   const baggage = items.toLowerCase();
   if (baggage.includes('knife') || baggage.includes('gun')) {
