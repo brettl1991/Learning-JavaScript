@@ -61,7 +61,7 @@ for (const day of days) {
 // On sat, we open at 0
 // On sun, we open at closed
 
-//working with methods too, so we can check if a methid exists before we calling
+//working with methods too, so we can check if a method exists before we calling
 console.log(restaurant.order?.(0, 1) ?? 'Method does not exist'); //[ 'Focaccia', 'Pasta' ]
 
 //works on array, we can use to check if an array is empty
