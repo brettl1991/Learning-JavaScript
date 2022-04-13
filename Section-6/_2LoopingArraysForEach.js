@@ -30,7 +30,7 @@ movements.forEach(function (movement) {
   }
 }); //same as above
 
-//if we want o acces the counter variable
+//if we want to acces the counter variable
 //in for of loop:
 for (const [i, movement] of movements.entries()) {
   //here first parameter is index, 2nd is the current array element
