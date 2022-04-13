@@ -78,7 +78,7 @@
 
 let arr = ['a', 'b', 'c', 'd', 'e'];
 
-//SLICE methods: extract part of any array without changint the original array
+//SLICE methods: extract part of any array without changing the original array
 console.log(arr.slice(2)); //[ 'c', 'd', 'e' ]
 console.log(arr.slice(2, 4)); //[ 'c', 'd' ]
 console.log(arr.slice(-2)); //[ 'd', 'e' ]
