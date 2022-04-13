@@ -116,5 +116,5 @@ console.log(letters);
 //or we can do this as will be same result
 console.log(...arr, ...arr2); //same as above
 
-//JOIN method
+//JOIN method does not mutate an array
 console.log(letters.join('-')); //a - b - c - d - e - f - g - h - i - j;
