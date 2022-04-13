@@ -89,7 +89,7 @@ console.log(arr.slice()); //[ 'a', 'b', 'c', 'd', 'e' ] or we can use spread ope
 console.log([...arr]); //[ 'a', 'b', 'c', 'd', 'e' ]
 
 //SPLICE method:almost same way as slice but difference, actually does change the original array, so mutates that array
-//first parameter is the position and the 2nd parameter is the delete count
+
 // console.log(arr.splice(2)); //[ 'c', 'd', 'e' ]
 //good usecase to remove last element of an array
 arr.splice(-1);
