@@ -2,7 +2,7 @@
 //reduce method: "boils" all arrays elements down to one single value, like a "snowball effect"
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 const balance = movements.reduce(function (acc, mov, i, arr) {
-  ////first parameter in call back function is the accumulator: keeps accumulating (osszegyujt, osszeszed) the value that we automatically want to return
+  ////first parameter in call back function is the accumulator: keeps accumulating (osszegyujt, osszeszed) the value that we automatically want to return, so first always need to decide what we want the acc and the current value to be and how to interract in the function
   console.log(`Iteration ${i}: ${acc}`);
   //Iteration 0: 0
   // Iteration 1: 200
@@ -25,3 +25,10 @@ console.log(balance2); //same
 //with arrow function
 const balance3 = movements.reduce((acc, mov) => acc + mov, 0);
 console.log(balance3); //same
+
+//max value of the movements
+const max = movements.reduce(
+  (acc, mov) => (acc > mov ? acc : mov),
+  movements[0]
+);
+console.log(max); //3000
