@@ -10,7 +10,9 @@ const calcAverageHumanAge = function (ages) {
   const exclude = humanAges.filter(age => age >= 18);
   console.log(exclude);
   const avarageHuman =
-    exclude.reduce((acc, age) => acc + age, 0) / exclude.length;
+    // exclude.reduce((acc, age) => acc + age, 0) / exclude.length;
+    //or
+    exclude.reduce((acc, age, i, arr) => acc + age / arr.length, 0);
   console.log(avarageHuman);
 };
 
