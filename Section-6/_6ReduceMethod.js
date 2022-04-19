@@ -32,3 +32,18 @@ const max = movements.reduce(
   movements[0]
 );
 console.log(max); //3000
+
+//practice
+//take the movements deposit, converting them from EUR to $ and add them all up
+//you can only chain methods if the first one returns an array
+const eurToUsd = 1.1;
+const totalDepositUSD = movements
+  .filter(mov => mov > 0) //after filter if we want to check the filtered values we can check in the next array like this, so basically debugging:
+  .map((mov, i, arr) => {
+    console.log(arr);
+    return mov * eurToUsd;
+  })
+  //if we not curious we can use without the arr parameter
+  // .map(mov => mov * eurToUsd)
+  .reduce((acc, mov) => acc + mov, 0);
+console.log(totalDepositUSD);
