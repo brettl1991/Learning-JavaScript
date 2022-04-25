@@ -17,7 +17,7 @@ console.log(arrDeep.flat(2)); //with these (inside) we can go nested levels
 //   5, 6, 7, 8
 // ]
 
-//calc all the movents of all the accounts
+//calc all the movements of all the accounts
 const account1 = {
   owner: 'Jonas Schmedtmann',
   movements: [200, 450, -400, 3000, -650, -130, 70, 1300],
