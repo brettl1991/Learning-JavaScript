@@ -14,4 +14,13 @@ dogs.forEach(function (dog, i, arr) {
   console.log(recommendedFood);
   dog['recommendedFood'] = recommendedFood;
 });
-console.log(dogs);
+// console.log(dogs);
+
+//2
+const dogSarah = dogs.find(dog => dog.owners.includes('Sarah'));
+console.log(dogSarah);
+console.log(
+  `Sarah's dog is eating too ${
+    dogSarah.curFood > dogSarah.recommendedFood ? 'much' : 'little'
+  }  `
+); //Sarah's dog is eating too much
