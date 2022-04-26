@@ -70,3 +70,9 @@ console.log(dogs.filter(okay));
 //     recommendedFood: 376
 //   }
 // ]
+
+//8
+const sorting = dogs
+  .slice()
+  .sort((a, b) => a.recommendedFood - b.recommendedFood);
+console.log(sorting);
