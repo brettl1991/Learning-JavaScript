@@ -24,3 +24,13 @@ console.log(
     dogSarah.curFood > dogSarah.recommendedFood ? 'much' : 'little'
   }  `
 ); //Sarah's dog is eating too much
+
+//3
+const ownersEatTooMuch = dogs
+  .filter(dog => dog.curFood > dog.recommendedFood)
+  .flatMap(dog => dog.owners);
+console.log(ownersEatTooMuch); //[ 'Matilda', 'Sarah', 'John' ]
+const ownersEatTooLittle = dogs
+  .filter(dog => dog.curFood < dog.recommendedFood)
+  .flatMap(dog => dog.owners);
+console.log(ownersEatTooLittle); //[ 'Alice', 'Bob', 'Michael' ]
