@@ -42,3 +42,31 @@ too little!`); //Alice and Bob and Michael's dogs eat too little!
 
 //5
 console.log(dogs.some(dog => dog.curFood === dog.recommendedFood)); //false
+
+//6
+console.log(
+  dogs.some(
+    dog =>
+      dog.curFood > dog.recommendedFood * 0.9 &&
+      dog.curFood < dog.recommendedFood * 1.1
+  )
+); //true
+// Being within a range 10% above and below the recommended portion means:
+// current > (recommended * 0.90) && current < (recommended *
+// 1.10). Basically, the current portion should be between 90% and 110% of the
+// recommended portion.
+
+//7
+const okay = dog =>
+  dog.curFood > dog.recommendedFood * 0.9 &&
+  dog.curFood < dog.recommendedFood * 1.1;
+console.log(dogs.some(okay)); //true
+console.log(dogs.filter(okay));
+// [
+//   {
+//     weight: 32,
+//     curFood: 340,
+//     owners: [ 'Michael' ],
+//     recommendedFood: 376
+//   }
+// ]
