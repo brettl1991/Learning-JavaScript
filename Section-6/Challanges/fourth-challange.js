@@ -34,3 +34,8 @@ const ownersEatTooLittle = dogs
   .filter(dog => dog.curFood < dog.recommendedFood)
   .flatMap(dog => dog.owners);
 console.log(ownersEatTooLittle); //[ 'Alice', 'Bob', 'Michael' ]
+
+//4
+console.log(`${ownersEatTooMuch.join(' and ')}'s dogs eat too much!`); //Matilda and Sarah and John's dogs eat too much!
+console.log(`${ownersEatTooLittle.join(' and ')}'s dogs eat 
+too little!`); //Alice and Bob and Michael's dogs eat too little!
