@@ -84,7 +84,7 @@ document
   });
 
 //Styles
-//to set a style on an element (have to use camelcas evrsion)
+//to set a style on an element (have to use camelcase version)
 message.style.backgroundColor = '#37383d';
 //set the width
 message.style.width = '120%';
@@ -96,3 +96,7 @@ console.log(getComputedStyle(message).height); //we can get message's height eve
 
 message.style.height =
   Number.parseFloat(getComputedStyle(message).height, 10) + 30 + 'px'; //as this will be a string we need to take out numbers from a string with parseFloat, 43.6667px
+
+//with custom properties (css variables) in root: in stylesheet we need to use setproperty but we can use this by the above actions
+//we want to change our primary color
+document.documentElement.style.setProperty('--color-primary', 'orangered'); //.documentElement is the way how we get acces to the root
