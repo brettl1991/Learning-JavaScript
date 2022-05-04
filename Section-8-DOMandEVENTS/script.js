@@ -127,3 +127,12 @@ console.log(link.getAttribute('href')); //relative version    #
 //data attributes: special attributes, starts with a data, we working with them when we need to store data in the ui
 //adding htmls under designer : data-version-number="3.0", than using here camelCase
 console.log(logo.dataset.versionNumber); //3.0
+
+//Classes
+logo.classList.add('c', 'j');
+logo.classList.remove('c', 'j');
+logo.classList.toggle('c');
+logo.classList.contains('c');
+
+//we can set the class, but dont use because this will overwrite all the existing classes and allow us to put only one class to an element
+logo.className = 'jonas';
