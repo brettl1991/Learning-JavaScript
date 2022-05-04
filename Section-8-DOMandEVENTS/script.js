@@ -210,30 +210,30 @@ setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
 // rgb(255, 255, 255);
 
 //this was the formula that we used before to generate a random intiger
-const randomInt = (min, max) =>
-  Math.floor(Math.random() * (max - min + 1) + min);
-const randomColor = () =>
-  `rgb(${randomInt(0, 255)},${randomInt(0, 255)},${randomInt(0, 255)})`;
-console.log(randomColor(0, 255)); //random colors keep appearing in the console
+// const randomInt = (min, max) =>
+//   Math.floor(Math.random() * (max - min + 1) + min);
+// const randomColor = () =>
+//   `rgb(${randomInt(0, 255)},${randomInt(0, 255)},${randomInt(0, 255)})`;
+// console.log(randomColor(0, 255)); //random colors keep appearing in the console
 
-document.querySelector('.nav__link').addEventListener('click', function (e) {
-  console.log('LINK', e.target, e.currentTarget);
-  //this keyword points always to an element on which the eventhandler attached if it's in an eventlistener
-  this.style.backgroundColor = randomColor();
+// document.querySelector('.nav__link').addEventListener('click', function (e) {
+//   console.log('LINK', e.target, e.currentTarget);
+//   //this keyword points always to an element on which the eventhandler attached if it's in an eventlistener
+//   this.style.backgroundColor = randomColor();
 
-  //stop propagation
-  // e.stopPropagation();//the event never arrive to the other elements down there in this case, so just only nav__link color will randomly change
-});
+//   //stop propagation
+//   // e.stopPropagation();//the event never arrive to the other elements down there in this case, so just only nav__link color will randomly change
+// });
 
-document.querySelector('.nav__links').addEventListener('click', function (e) {
-  console.log('LINK', e.target, e.currentTarget);
-  this.style.backgroundColor = randomColor();
-});
+// document.querySelector('.nav__links').addEventListener('click', function (e) {
+//   console.log('LINK', e.target, e.currentTarget);
+//   this.style.backgroundColor = randomColor();
+// });
 
-document.querySelector('.nav').addEventListener('click', function (e) {
-  console.log('LINK', e.target, e.currentTarget);
-  this.style.backgroundColor = randomColor();
-});
+// document.querySelector('.nav').addEventListener('click', function (e) {
+//   console.log('LINK', e.target, e.currentTarget);
+//   this.style.backgroundColor = randomColor();
+// });
 //console.log('LINK', e.target); when we click example to just the nav__link for all 3 handler the target element always be the same, the element where the click first happened(nav__link), because of event bubbling
 // LINK <a class="nav__link" href="#section--1" style="background-color: rgb(196, 101, 11);">Features</a>
 // LINK <a class="nav__link" href="#section--1" style="background-color: rgb(148, 234, 113);">Features</a>
@@ -250,3 +250,37 @@ document.querySelector('.nav').addEventListener('click', function (e) {
 //   },
 //   true
 // ); //set the 3rd parameter to true , the eventhandler not listening to the bubbling events, instead to capture events, in pracice looks the same but in the console we can see the nav is the first appearing, capturing rarely used nowdays
+
+//EVENT DELEGATION: IMPLEMENTING PAGE NAVIGATION SMOOTHLY
+//page navigation
+//first without event delegation
+// document.querySelectorAll('.nav__link').forEach(function (el) {
+//   el.addEventListener('click', function (e) {
+//     console.log('LINK');
+//     e.preventDefault(); //now we prevent to scroll down when we clicking each of the nav link
+//     const id = this.getAttribute('href'); //have to select href to be able to use smmoth scroll trough the href link
+//     console.log(id); //getting back section-1 2 or 3 depends which one we click
+//     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+//   });
+// });
+
+//but now we have just 3 elemeny and what if we need to do this with 1000 than this soloution above would affect badly the performance of the code, not a clean solution, better to use event delegation
+
+//with event delegation we use the fact that events bubble up and we do that by putting the eventlistener on a common parent of all the elements that we are intrested in
+
+//1.Add the eventlistener on a common parent of all the elements that we are intrested in
+//2.Determin what element originated the event
+document.querySelector('.nav__links').addEventListener('click', function (e) {
+  e.preventDefault();
+  //we need to figure out where the event happened
+  console.log(e.target);
+
+  //matching strategy to figure out if the target contains nav__link or not when we click
+  if (e.target.classList.contains('nav__link')) {
+    console.log('LINK');
+
+    const id = e.target.getAttribute('href');
+    console.log(id);
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+  }
+});
