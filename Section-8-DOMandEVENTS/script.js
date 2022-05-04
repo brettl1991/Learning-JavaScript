@@ -82,3 +82,17 @@ document
     //before we removed like this:
     // message.parentElement.removeChild(message);
   });
+
+//Styles
+//to set a style on an element (have to use camelcas evrsion)
+message.style.backgroundColor = '#37383d';
+//set the width
+message.style.width = '120%';
+//in the console we only can get from the styles that we defined nothing else, like wont work if we want to get the height
+console.log(message.style.height); //we get back nothing
+//if we want to get back the color from the stylesheet:
+console.log(getComputedStyle(message).color);
+console.log(getComputedStyle(message).height); //we can get message's height even though is not defined
+
+message.style.height =
+  Number.parseFloat(getComputedStyle(message).height, 10) + 30 + 'px'; //as this will be a string we need to take out numbers from a string with parseFloat, 43.6667px
