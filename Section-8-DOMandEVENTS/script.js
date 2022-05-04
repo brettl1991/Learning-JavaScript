@@ -136,3 +136,45 @@ logo.classList.contains('c');
 
 //we can set the class, but dont use because this will overwrite all the existing classes and allow us to put only one class to an element
 logo.className = 'jonas';
+
+//IMPLEMENTING SMOOTH SCROLLING WHEN WE CLICK TO LEARN MORE, SCROLLS TO THE FISRT SECTION
+//1selecting button and section where we want to scroll to
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+const section1 = document.querySelector('#section--1');
+
+//add eventlistener on the button
+btnScrollTo.addEventListener('click', function (e) {
+  //first we need to get the coordinates of the element that we want to scroll to
+  const s1coords = section1.getBoundingClientRect(); //so getBoundingClientRect() always relative to this visible viewport so when we scroll or move will be different that it returns back
+  console.log(s1coords); //we get in console the DOM rectangle with width height, x y data etc
+  //{x: 0, y: 338.3999938964844, width: 1519.2000732421875, height: 1670.4500732421875, top: 338.3999938964844, …}
+
+  console.log(e.target.getBoundingClientRect()); //e.target is the btnScrollTo
+
+  //we can get current scroll position:
+  console.log('Current scroll (X/Y)', window.pageXOffset, pageYOffset); //Current scroll (X/Y) 0 300
+  //we can read the height and width of the viewport
+  console.log(
+    'height/width vieport',
+    document.documentElement.clientHeight,
+    document.documentElement.clientWidth
+  ); //height/width vieport 407 1519
+
+  //scrolling
+  // window.scrollTo(
+  //   s1coords.left + window.pageXOffset,
+  //   s1coords.top + window.pageYOffset
+  // ); //with this we determined the absolute position of this element relative to the entire page (current position + current score)
+
+  //or much better way
+  // window.scrollTo({
+  //   left: s1coords.left + window.pageXOffset,
+  //   top: s1coords.top + window.pageYOffset,
+  //   behavior: 'smooth',
+  // });
+
+  //more modern way
+  section1.scrollIntoView({
+    behavior: 'smooth',
+  });
+});
