@@ -109,7 +109,7 @@ console.log(logo.alt); //Bankist logo
 console.log(logo.src); //http://127.0.0.1:8080/img/logo.png this is the absolute version (console version)
 //but when we adding manually to img designer='Jonas' and we try to read from here:so
 //non-standard
-console.log(logo.designer); //not working undefined because this is not a standard property that is expected to be on img
+console.log(logo.designer); //not working, getting undefined because this is not a standard property that is expected to be on img
 //the way to acces is:
 console.log(logo.getAttribute('designer')); //Jonas
 console.log(logo.setAttribute('company', 'Bankist')); //new attribute cretaed Bankist="company"
