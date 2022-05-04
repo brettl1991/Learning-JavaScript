@@ -206,3 +206,47 @@ setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
 //passing onclick to h1 element in html
 
 //EVENT PROPAGATION: BUBBLING AND CAPTURING
+//attaching event handlers to the nav link and all of it parents elements and when we click this link we will give all these elemnts random bg colors so we can se how event bubbling happening
+// rgb(255, 255, 255);
+
+//this was the formula that we used before to generate a random intiger
+const randomInt = (min, max) =>
+  Math.floor(Math.random() * (max - min + 1) + min);
+const randomColor = () =>
+  `rgb(${randomInt(0, 255)},${randomInt(0, 255)},${randomInt(0, 255)})`;
+console.log(randomColor(0, 255)); //random colors keep appearing in the console
+
+document.querySelector('.nav__link').addEventListener('click', function (e) {
+  console.log('LINK', e.target, e.currentTarget);
+  //this keyword points always to an element on which the eventhandler attached if it's in an eventlistener
+  this.style.backgroundColor = randomColor();
+
+  //stop propagation
+  // e.stopPropagation();//the event never arrive to the other elements down there in this case, so just only nav__link color will randomly change
+});
+
+document.querySelector('.nav__links').addEventListener('click', function (e) {
+  console.log('LINK', e.target, e.currentTarget);
+  this.style.backgroundColor = randomColor();
+});
+
+document.querySelector('.nav').addEventListener('click', function (e) {
+  console.log('LINK', e.target, e.currentTarget);
+  this.style.backgroundColor = randomColor();
+});
+//console.log('LINK', e.target); when we click example to just the nav__link for all 3 handler the target element always be the same, the element where the click first happened(nav__link), because of event bubbling
+// LINK <a class="nav__link" href="#section--1" style="background-color: rgb(196, 101, 11);">Features</a>
+// LINK <a class="nav__link" href="#section--1" style="background-color: rgb(148, 234, 113);">Features</a>
+// LINK <a class="nav__link" href="#section--1" style="background-color: rgb(137, 11, 147);">Features</a>
+//e.currentTarget not the same and will be the elemnet on which the eventlistener to atatched to, like this keyword
+
+//Capture phase: default behavior for events
+//if we want to catch events during the capturing phase we can define a 3rd parameter in the addEventListener function
+// document.querySelector('.nav').addEventListener(
+//   'click',
+//   function (e) {
+//     console.log('LINK', e.target, e.currentTarget);
+//     this.style.backgroundColor = randomColor();
+//   },
+//   true
+// ); //set the 3rd parameter to true , the eventhandler not listening to the bubbling events, instead to capture events, in pracice looks the same but in the console we can see the nav is the first appearing, capturing rarely used nowdays
