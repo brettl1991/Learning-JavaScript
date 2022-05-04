@@ -72,3 +72,13 @@ header.append(message);
 
 // header.before(message); //insert the message as a sybling before the header element
 // header.after(message); //insert the message as a sybling after the header element
+
+//delete elements
+//we want to delete the message element if we are clicking the got it button
+document
+  .querySelector('.btn--close-cookie')
+  .addEventListener('click', function () {
+    message.remove();
+    //before we removed like this:
+    // message.parentElement.removeChild(message);
+  });
