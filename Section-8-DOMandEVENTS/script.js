@@ -100,3 +100,30 @@ message.style.height =
 //with custom properties (css variables) in root: in stylesheet we need to use setproperty but we can use this by the above actions
 //we want to change our primary color
 document.documentElement.style.setProperty('--color-primary', 'orangered'); //.documentElement is the way how we get acces to the root
+
+//Attributes: provides info abou HTML elements (like href, style, alt, class, id...)
+//select logo
+
+const logo = document.querySelector('.nav__logo');
+console.log(logo.alt); //Bankist logo
+console.log(logo.src); //http://127.0.0.1:8080/img/logo.png this is the absolute version (console version)
+//but when we adding manually to img designer='Jonas' and we try to read from here:so
+//non-standard
+console.log(logo.designer); //not working undefined because this is not a standard property that is expected to be on img
+//the way to acces is:
+console.log(logo.getAttribute('designer')); //Jonas
+console.log(logo.setAttribute('company', 'Bankist')); //new attribute cretaed Bankist="company"
+console.log(logo.getAttribute('src')); //img/logo.png this is the relative version (html version)
+//otherone which work
+console.log(logo.className); //nav__logo
+
+//we can not just read bu set them as well
+logo.alt = 'Beautiful minimalist logo'; //so we changed it in html
+
+const link = document.querySelector('.nav__link--btn');
+console.log(link.href); //absolute version    http://127.0.0.1:8080/#
+console.log(link.getAttribute('href')); //relative version    #
+
+//data attributes: special attributes, starts with a data, we working with them when we need to store data in the ui
+//adding htmls under designer : data-version-number="3.0", than using here camelCase
+console.log(logo.dataset.versionNumber); //3.0
