@@ -204,3 +204,5 @@ setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
 
 //3rd way to handling an event is using a html attribute: should not be used
 //passing onclick to h1 element in html
+
+//EVENT PROPAGATION: BUBBLING AND CAPTURING
