@@ -284,3 +284,40 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
   }
 });
+
+//DOM TRAVERSING
+//basically walking trough the DOM, which means that we can select an element based on an other element
+//going downwards: (child)
+console.log(h1.querySelectorAll('.highlight'));
+//for direct children:
+console.log(h1.childNodes);
+console.log(h1.children); //gives us an HTML collection
+//first and last element child
+h1.firstElementChild.style.color = 'white'; //banking word bwcome white
+h1.lastElementChild.style.color = 'orangered'; //minimalist word become orangered
+
+//going upwords: parents
+console.log(h1.parentNode); //giving back header title
+console.log(h1.parentElement); //same in this case
+
+//we might need to find a parentelement no matter how far in the DOM tree
+h1.closest('.header').style.background = 'var(--gradient-secondary)'; //selected the closest parent element that has the header class and styled it
+//if we are looking for the closest h1
+h1.closest('h1').style.background = 'var(--gradient-primary)'; //h1 element itself become green
+
+//the querySelector finds children while the closest method find parents
+
+//goins sideways: siblings (in js we can access just direct siblings)
+console.log(h1.previousSibling); //null as nothing there
+console.log(h1.nextElementSibling); //h4 element
+
+//same properties for nodes:
+console.log(h1.previousSibling); //text
+console.log(h1.nextSibling);
+
+//if we need all siblings
+console.log(h1.parentElement.children); //we get all of the siblings includes itself
+//we can create from this an array amd we can loop overthem
+[...h1.parentElement.children].forEach(function (el) {
+  if (el !== h1) el.style.transform = 'scale(0.5)'; //all the other siblings are 50% smaller
+});
