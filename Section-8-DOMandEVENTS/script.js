@@ -349,3 +349,27 @@ tabsContainer.addEventListener('click', function (e) {
     .querySelector(`.operations__content--${clicked.dataset.tab}`)
     .classList.add('operations__content--active');
 });
+
+//PASSING ARGUMENTS TO EVENT HANDLERS
+//when we hoover over the links all the others fade out except the one we hoovered over
+const handleHover = function (e) {
+  if (e.target.classList.contains('nav__link')) {
+    const link = e.target;
+    //need to sleect sibling elements, so all the other link
+    const siblings = link.closest('.nav').querySelectorAll('.nav__link');
+    const logo = link.closest('.nav').querySelector('img');
+    siblings.forEach(el => {
+      if (el !== link) el.style.opacity = this;
+    });
+
+    logo.style.opacity = this;
+  }
+};
+
+////so we use a bind method for both to pass an argument into a handlerfunction
+
+const nav = document.querySelector('.nav');
+nav.addEventListener('mouseover', handleHover.bind(0.5));
+
+//fixing the opacity to go back from 0.5 to 1
+nav.addEventListener('mouseout', handleHover.bind(1));
