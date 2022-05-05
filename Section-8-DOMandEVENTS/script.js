@@ -373,3 +373,17 @@ nav.addEventListener('mouseover', handleHover.bind(0.5));
 
 //fixing the opacity to go back from 0.5 to 1
 nav.addEventListener('mouseout', handleHover.bind(1));
+
+//IMPLEMENTING A STICKY NAVIGATION: THE SCROLL EVENT
+//so the nav bar bcome attached the page after we scroll to a certain point
+
+//sticky navigation, the scroll event available on window not on document, the scroll event should be avoided as for performance not goodcd
+const initialCordinates = section1.getBoundingClientRect();
+console.log(initialCordinates);
+window.addEventListener('scroll', function () {
+  console.log(window.scrollY); //position from the point of the viewport until the top of the page
+
+  //when the navigation should be sticky? as soon as we reach the 1st section
+  if (window.scrollY > initialCordinates.top) nav.classList.add('sticky');
+  else nav.classList.remove('sticky');
+});
