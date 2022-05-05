@@ -321,3 +321,31 @@ console.log(h1.parentElement.children); //we get all of the siblings includes it
 [...h1.parentElement.children].forEach(function (el) {
   if (el !== h1) el.style.transform = 'scale(0.5)'; //all the other siblings are 50% smaller
 });
+
+//BUILDING A TABBED COMPONENT
+//selecting the tabs
+const tabs = document.querySelectorAll('.operations__tab');
+const tabsContainer = document.querySelector('.operations__tab-container');
+const tabsContent = document.querySelectorAll('.operations__content');
+
+//adding event handlers to the buttons using event delegation:
+tabsContainer.addEventListener('click', function (e) {
+  const clicked = e.target.closest('.operations__tab');
+  console.log(clicked); //so we get which button we get
+  //need to fix when we click the tabs container we get null as there is no parent element so we need to ignore any clicks where the result is 0, this is:
+  //guard clause: an if statement which will return early if some condition is matched
+  if (!clicked) return; //if no click return back to the function
+  //fixing when we click only one button should move up, the others should stay down so we need to remove the active class before we add to the clicked one, also doing the same for the tabs (removing active class before we adding to that we intrested in)
+
+  //remove active classes
+  tabs.forEach(t => t.classList.remove('operations__tab--active'));
+  tabsContent.forEach(c => c.classList.remove('operations__content--active'));
+  //activate tab
+  clicked.classList.add('operations__tab--active');
+
+  //activate the content area: this info is in the data attribute in HTML
+  // console.log(clicked.dataset.tab);
+  document
+    .querySelector(`.operations__content--${clicked.dataset.tab}`)
+    .classList.add('operations__content--active');
+});
