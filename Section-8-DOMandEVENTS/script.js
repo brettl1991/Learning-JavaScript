@@ -70,8 +70,8 @@ header.append(message);
 //but if we want to insert multiple copies of the same element: first we need to copy
 // header.append(message.cloneNode(true)); //all the child elements will be copied, so now we get the same cookie message in both places
 
-// header.before(message); //insert the message as a sybling before the header element
-// header.after(message); //insert the message as a sybling after the header element
+// header.before(message); //insert the message as a sibling before the header element
+// header.after(message); //insert the message as a sibling after the header element
 
 //delete elements
 //we want to delete the message element if we are clicking the got it button
@@ -125,7 +125,7 @@ console.log(link.href); //absolute version    http://127.0.0.1:8080/#
 console.log(link.getAttribute('href')); //relative version    #
 
 //data attributes: special attributes, starts with a data, we working with them when we need to store data in the ui
-//adding htmls under designer : data-version-number="3.0", than using here camelCase
+//adding in html under designer : data-version-number="3.0", than using here camelCase
 console.log(logo.dataset.versionNumber); //3.0
 
 //Classes
@@ -180,7 +180,7 @@ btnScrollTo.addEventListener('click', function (e) {
 });
 
 //TYPES OF EVENTS AND EVENT HANDLERS
-//everything that happens on the webpage generates ans event
+//everything that happens on the webpage generates an event
 
 const h1 = document.querySelector('h1');
 // h1.addEventListener('mouseenter', function (e) {
@@ -206,7 +206,7 @@ setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
 //passing onclick to h1 element in html
 
 //EVENT PROPAGATION: BUBBLING AND CAPTURING
-//attaching event handlers to the nav link and all of it parents elements and when we click this link we will give all these elemnts random bg colors so we can se how event bubbling happening
+//attaching event handlers to the nav link and all of it parents elements and when we click this link we will give all these elements random bg colors so we can see how event bubbling happening
 // rgb(255, 255, 255);
 
 //this was the formula that we used before to generate a random intiger
@@ -249,7 +249,7 @@ setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
 //     this.style.backgroundColor = randomColor();
 //   },
 //   true
-// ); //set the 3rd parameter to true , the eventhandler not listening to the bubbling events, instead to capture events, in pracice looks the same but in the console we can see the nav is the first appearing, capturing rarely used nowdays
+// ); //set the 3rd parameter to true , the eventhandler not listening to the bubbling events, instead to capture events, in practice looks the same but in the console we can see the nav is the first appearing, capturing rarely used nowdays
 
 //EVENT DELEGATION: IMPLEMENTING PAGE NAVIGATION SMOOTHLY
 //page navigation
@@ -264,7 +264,7 @@ setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
 //   });
 // });
 
-//but now we have just 3 elemeny and what if we need to do this with 1000 than this soloution above would affect badly the performance of the code, not a clean solution, better to use event delegation
+//but now we have just 3 element and what if we need to do this with 1000 elements instead of 3, than this soloution above would affect badly the performance of the code, not a clean solution, better to use event delegation
 
 //with event delegation we use the fact that events bubble up and we do that by putting the eventlistener on a common parent of all the elements that we are intrested in
 
@@ -317,7 +317,7 @@ console.log(h1.nextSibling);
 
 //if we need all siblings
 console.log(h1.parentElement.children); //we get all of the siblings includes itself
-//we can create from this an array amd we can loop overthem
+//we can create from this an array and we can loop over them
 [...h1.parentElement.children].forEach(function (el) {
   if (el !== h1) el.style.transform = 'scale(0.5)'; //all the other siblings are 50% smaller
 });
@@ -331,6 +331,7 @@ const tabsContent = document.querySelectorAll('.operations__content');
 //adding event handlers to the buttons using event delegation:
 tabsContainer.addEventListener('click', function (e) {
   const clicked = e.target.closest('.operations__tab');
+  console.log('CLOSEST: ', e.target.closest('.operations__tab'));
   console.log(clicked); //so we get which button we get
   //need to fix when we click the tabs container we get null as there is no parent element so we need to ignore any clicks where the result is 0, this is:
   //guard clause: an if statement which will return early if some condition is matched
@@ -342,11 +343,13 @@ tabsContainer.addEventListener('click', function (e) {
   tabsContent.forEach(c => c.classList.remove('operations__content--active'));
   //activate tab
   clicked.classList.add('operations__tab--active');
+  console.log('DATASET TAB', clicked.dataset.tab);
+  console.log('DATASET', clicked.dataset);
 
   //activate the content area: this info is in the data attribute in HTML
   // console.log(clicked.dataset.tab);
   document
-    .querySelector(`.operations__content--${clicked.dataset.tab}`)
+    .querySelector(`.operations__content--${clicked.dataset.tab}`) //this is for the content below tabs
     .classList.add('operations__content--active');
 });
 
@@ -375,9 +378,9 @@ nav.addEventListener('mouseover', handleHover.bind(0.5));
 nav.addEventListener('mouseout', handleHover.bind(1));
 
 //IMPLEMENTING A STICKY NAVIGATION: THE SCROLL EVENT
-//so the nav bar bcome attached the page after we scroll to a certain point
+//so the nav bar become attached the page after we scroll to a certain point
 
-//sticky navigation, the scroll event available on window not on document, the scroll event should be avoided as for performance not goodcd
+//sticky navigation, the scroll event available on window not on document, the scroll event should be avoided because of performance issues
 const initialCordinates = section1.getBoundingClientRect();
 console.log(initialCordinates);
 window.addEventListener('scroll', function () {
