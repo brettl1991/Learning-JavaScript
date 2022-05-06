@@ -36,7 +36,7 @@ console.log(document.head);
 console.log(document.body);
 
 //or
-const header = document.querySelector('.header');
+// const header = document.querySelector('.header');
 const allSections = document.querySelectorAll('.section');
 console.log(allSections); //this will return a nodelist which will contain all of the elements that are a section
 
@@ -65,7 +65,7 @@ message.innerHTML =
 //insert it to the DOM in to our page in header
 // header.prepend(message); //prepend adding the element as a first child
 //append adding the element as a last child
-header.append(message);
+// header.append(message);
 //a DOM element is unique so always only exist in one place at the time, so with those above we can just insert once
 //but if we want to insert multiple copies of the same element: first we need to copy
 // header.append(message.cloneNode(true)); //all the child elements will be copied, so now we get the same cookie message in both places
@@ -75,13 +75,13 @@ header.append(message);
 
 //delete elements
 //we want to delete the message element if we are clicking the got it button
-document
-  .querySelector('.btn--close-cookie')
-  .addEventListener('click', function () {
-    message.remove();
-    //before we removed like this:
-    // message.parentElement.removeChild(message);
-  });
+// document
+//   .querySelector('.btn--close-cookie')
+//   .addEventListener('click', function () {
+//     message.remove();
+//     //before we removed like this:
+//     // message.parentElement.removeChild(message);
+//   });
 
 //Styles
 //to set a style on an element (have to use camelcase version)
@@ -301,7 +301,7 @@ console.log(h1.parentNode); //giving back header title
 console.log(h1.parentElement); //same in this case
 
 //we might need to find a parentelement no matter how far in the DOM tree
-h1.closest('.header').style.background = 'var(--gradient-secondary)'; //selected the closest parent element that has the header class and styled it
+// h1.closest('.header').style.background = 'var(--gradient-secondary)'; //selected the closest parent element that has the header class and styled it
 //if we are looking for the closest h1
 h1.closest('h1').style.background = 'var(--gradient-primary)'; //h1 element itself become green
 
@@ -390,3 +390,42 @@ window.addEventListener('scroll', function () {
   if (window.scrollY > initialCordinates.top) nav.classList.add('sticky');
   else nav.classList.remove('sticky');
 });
+
+//BETTER WAY: THE INTERSECTION OBSERVER API
+//Observers are objects that observe or spot something in real-time, Observer APIs are useful to detect changes in an application
+//In Javascript, performing an action when an element becomes visible to a user has always required the following:
+//Identifying the current scroll position. Getting the element’s top offset. Listener cleanup. Load on the main thread work. The Solution: Intersection Observer API
+//The Intersection Observer API can be used to observe an element and run a callback function when it enters or leaves the viewport (or another element).
+// how this work? to use we need to create a new intersection observer and options
+const obsCallback = function (entries, observer) {
+  //   //entries are an array of the threshold
+  //   //this callback func will get called each time when the observed element is (target element: section1) intersecting the root element at the threshold that we defined, so when the first section (our target) intersecting the viewport at 10% that func will get called no matter that we scroll down or up
+  entries.forEach(entry => {
+    console.log(entry); //when the target element come into the viewport because we scrolling and we can use this to know when we arrive into certain parts
+  });
+};
+const obsOptions = {
+  root: null, //the root is the element that the target is intersecting(atmetsz), if null we looking at the viewport
+  threshold: [0, 0.2], //the percentage of intersection at which the observercallback will be called, 0% means that our callback will trigger(kivalt, eloidez) each time that the target elements moves completly out or enters the view, if it would be 1: means 100% so the callback will only be called when 100% the target will be visible in the viewport
+};
+const observer = new IntersectionObserver(obsCallback, obsOptions); //first parameter is the callback, second is the options(we can write the options inside here as well)
+// //observe a certain target
+observer.observe(section1);
+
+//so we want our nav to be sticky when the header moves completaly out of the view
+const header = document.querySelector('.header');
+const navHeight = nav.getBoundingClientRect().height;
+console.log(navHeight);
+const stickyNav = function (entries) {
+  //this case dont need to define the observer, and because only one threshold we do not need to loop over the entries like above
+  const [entry] = entries; //same as we would write : const[entry] = entries[0], so we can get the first threshold
+  console.log(entry);
+  if (!entry.isIntersecting) nav.classList.add('sticky');
+  else nav.classList.remove('sticky');
+};
+const headerObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${navHeight}px`, //a box of pixels that will applied outside of our target (this case header)  elements //so the nav appeared exactly at 90 px before the threshold got reached, these pixels can get calculated dynamically(here is navHeight)
+});
+headerObserver.observe(header);
