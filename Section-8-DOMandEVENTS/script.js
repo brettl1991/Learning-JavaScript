@@ -37,8 +37,8 @@ console.log(document.body);
 
 //or
 // const header = document.querySelector('.header');
-const allSections = document.querySelectorAll('.section');
-console.log(allSections); //this will return a nodelist which will contain all of the elements that are a section
+// const allSections = document.querySelectorAll('.section');
+// console.log(allSections); //this will return a nodelist which will contain all of the elements that are a section
 
 //or
 document.getElementById('section--1');
@@ -429,3 +429,34 @@ const headerObserver = new IntersectionObserver(stickyNav, {
   rootMargin: `-${navHeight}px`, //a box of pixels that will applied outside of our target (this case header)  elements //so the nav appeared exactly at 90 px before the threshold got reached, these pixels can get calculated dynamically(here is navHeight)
 });
 headerObserver.observe(header);
+
+//REVALING (FELTAR, LELEPLEZ) ELEMENTS ON SCROLL
+
+//using the inrasection observer api
+//we will revale elements as we close to them, so we will revale each 4 sections as we get close
+
+//adding .section-hidden css class to all section in hml, so they gonna be invisible, but we can do this by writing code and not manually
+//so our job to remove these calsses as we approach each sections
+
+//Rrveal sections
+const allSections = document.querySelectorAll('.section');
+console.log('ALLSECTION', allSections);
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+  console.log(entry);
+  //we need to know which section inrasected the viewport, thats where we use target
+  if (!entry.isIntersecting) return;
+  entry.target.classList.remove('section--hidden');
+  //stop observing
+  observer.unobserve(entry.target);
+};
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.15,
+});
+
+allSections.forEach(function (section) {
+  console.log('SECTION', section);
+  sectionObserver.observe(section);
+  section.classList.add('section--hidden'); //adding .section-hidden css class to all section in hml
+});
