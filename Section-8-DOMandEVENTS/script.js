@@ -460,3 +460,30 @@ allSections.forEach(function (section) {
   sectionObserver.observe(section);
   section.classList.add('section--hidden'); //adding .section-hidden css class to all section in hml
 });
+
+//LAZY LOADING IMAGES
+//ON WEBSITES THE PERFORMANCE IS REALLY IMPORTANS, SO DOES HOW IMAGES LOADING
+//the idea when we scroll we will replace the low resolution images to a digital one (low res images are in src in html, bigger sized images in data-src underneath) and we are planning to remove thelazy-img class as well when we scroll to that point as this class kind of behaving like a blurr filter
+
+//not all img will be lazy loaded so we dont need to select allof them
+const imgTargets = document.querySelectorAll('img[data-src]');
+console.log(imgTargets);
+const loadinImg = function (entries, observer) {
+  const [entry] = entries;
+  console.log(entry);
+  if (!entry.isIntersecting) return;
+  //Replace src attribute with data.src (replace the img with that we want)
+  entry.target.src = entry.target.dataset.src;
+  //remove the blury image (only will disspaear once the loading of the img finished)
+  entry.addEventListener('load', function () {
+    entry.target.classList.remove('lazy-img');
+  });
+  observer.unobserve(entry.target);
+};
+
+const imgObserver = new IntersectionObserver(loadinImg, {
+  root: null,
+  threshold: 0,
+  rootMargin: '200px', //before we reach the images already loaded to the digital one and we cant see the blurring out process
+});
+imgTargets.forEach(img => imgObserver.observe(img));
