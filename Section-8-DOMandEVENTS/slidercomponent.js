@@ -11,10 +11,10 @@ let currentSlide = 0;
 const maxSlide = slides.length; //on nodelist as well we can read the lenght property same as on arrays
 
 //scale down the slider
-const slider = document.querySelector('.slider');
-slider.style.transform = 'scale(0.4) translateX(-800px)';
+// const slider = document.querySelector('.slider');
+// slider.style.transform = 'scale(0.4) translateX(-800px)';
 //set overflow to visible to see the other slides
-slider.style.overflow = 'visible';
+// slider.style.overflow = 'visible';
 //first slide should be 0%, 2nd 100%, 3rd 200%, 4th 300%
 //goToSlide(0) will replace this, so the slide set to 0, this will do: once our application starts it immediately goes slide to 0 (so i-0 will be i like here below)
 // slides.forEach((s, i) => (s.style.transform = `translateX(${100 * i}%)`));
@@ -35,4 +35,15 @@ const nextSlide = function () {
   //CurrentSlide = 1: -100%,0%,100%,200%
   goToSlide(currentSlide);
 };
+
+const prevSlide = function () {
+  if (currentSlide === 0) {
+    currentSlide = maxSlide - 1;
+  } else {
+    currentSlide--;
+  }
+  goToSlide(currentSlide);
+};
+
 btnRight.addEventListener('click', nextSlide);
+btnLeft.addEventListener('click', prevSlide);
