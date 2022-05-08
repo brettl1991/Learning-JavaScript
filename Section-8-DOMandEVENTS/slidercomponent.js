@@ -24,7 +24,7 @@ const goToSlide = function (slide) {
     (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
   );
 };
-activateDots(0); //with this the first dot got activated once we reload the page
+
 goToSlide(0);
 //going to the next slide (active 0%, previous -100%, next one is 100%)
 const nextSlide = function () {
@@ -95,4 +95,5 @@ const activateDots = function (slide) {
   //we need to add this function to all the necessary places
 };
 
-//one problem when we reload non of the slides are active, to solve add createDots(0) before goToSlide()
+//one problem when we reload non of the slides are active, to solve add createDots(0)
+activateDots(0); //with this the first dot got activated once we reload the page
