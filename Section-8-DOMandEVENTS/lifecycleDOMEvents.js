@@ -20,3 +20,25 @@ window.addEventListener('beforeunload', function (e) {
   //need to set the return value to an empty string
   e.returnValue = '';
 });
+
+//EFFICIENT SCRIPT LOADING: DEFER AND ASYNC
+//Up until now we just used the normal script tag for js in HTML but we can add the defer or async attributes to it:
+//this will influence the way how the js will be fetched, and than executed
+//we can writhe the js scrip in HTML in the head or end of the body:
+//all because of page loading process
+
+//                                                  //HEAD                                                                BODY END
+//Regular script                      parsing the html...  waiting....         finish parsing html           parsing html - fetch script - execute
+//                                    time -              fetch script - execute                                       good usecase
+//                                    not good usecase to put in the head like this
+
+//ASYNC                                parsing the html...  waiting....         finish parsing html
+//                                           fetch script -    execute
+//                                      script has been loaded same time as html been parsed, but still
+//                                      the html parsing stipp stops before execution
+
+//DEFER                                 parsing the html - execute
+//                                        fetch script
+//                                      //never gets interrupted the parsing, best solution to use
+
+//picture scriptloading
