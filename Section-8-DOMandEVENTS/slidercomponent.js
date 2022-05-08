@@ -47,3 +47,11 @@ const prevSlide = function () {
 
 btnRight.addEventListener('click', nextSlide);
 btnLeft.addEventListener('click', prevSlide);
+
+//attaching an event handler to a keyboard event to slide through the slider using the left and right arrow keys on keyboard
+document.addEventListener('keydown', function (e) {
+  console.log(e);
+  if (e.key === 'ArrowLeft') prevSlide();
+  //or we can use short circuting
+  // e.key === 'ArrowLeft' && nextSlide();
+});
