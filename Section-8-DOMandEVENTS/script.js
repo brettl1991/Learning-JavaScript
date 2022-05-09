@@ -406,13 +406,13 @@ const obsCallback = function (entries, observer) {
 };
 const obsOptions = {
   root: null, //the root is the element that the target is intersecting(atmetsz), if null we looking at the viewport
-  threshold: [0, 0.2], //the percentage of intersection at which the observercallback will be called, 0% means that our callback will trigger(kivalt, eloidez) each time that the target elements moves completaly out or enters the view, if it would be 1: means 100% so the callback will only be called when 100% the target will be visible in the viewport
+  threshold: [0, 0.2], //the percentage of intersection at which the observercallback will be called, 0% means that our callback will trigger(kivalt, eloidez) each time that the target elements moves completely out or enters the view, if it would be 1: means 100% so the callback will only be called when 100% the target will be visible in the viewport
 };
 const observer = new IntersectionObserver(obsCallback, obsOptions); //first parameter is the callback, second is the options(we can write the options inside here as well)
 // //observe a certain target
 observer.observe(section1);
 
-//so we want our nav to be sticky when the header moves completaly out of the view
+//so we want our nav to be sticky when the header moves completely out of the view
 const header = document.querySelector('.header');
 const navHeight = nav.getBoundingClientRect().height;
 console.log(navHeight);
@@ -462,7 +462,7 @@ allSections.forEach(function (section) {
 });
 
 //LAZY LOADING IMAGES
-//ON WEBSITES THE PERFORMANCE IS REALLY IMPORTANt, SO DOES HOW IMAGES LOADING
+//ON WEBSITES THE PERFORMANCE IS REALLY IMPORTANT, SO DOES HOW IMAGES LOADING
 //the idea when we scroll we will replace the low resolution images to a digital one (low res images are in src in html, bigger sized images in data-src underneath) and we are planning to remove the lazy-img class as well when we scroll to that point as this class kind of behaving like a blur filter
 
 //not all img will be lazy loaded so we dont need to select all of them
