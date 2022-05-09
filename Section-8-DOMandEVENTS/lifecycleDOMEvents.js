@@ -11,7 +11,7 @@ window.addEventListener('load', function (e) {
   console.log('Page fully loaded', e);
 });
 
-//Before Unload Event: also gets fired on window, created immediately before the user is about to leave the page, it is good to use to ask users if they 100% sure they want to leave teh page, so a window will pop up
+//Before Unload Event: also gets fired on window, created immediately before the user is about to leave the page, it is good to use to ask users if they 100% sure they want to leave the page, so a window will pop up
 window.addEventListener('beforeunload', function (e) {
   e.preventDefault();
   console.log(e);
