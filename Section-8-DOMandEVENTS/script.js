@@ -138,7 +138,7 @@ logo.classList.contains('c');
 logo.className = 'jonas';
 
 //IMPLEMENTING SMOOTH SCROLLING WHEN WE CLICK TO LEARN MORE, SCROLLS TO THE FISRT SECTION
-//1selecting button and section where we want to scroll to
+//1 selecting button and section where we want to scroll to
 const btnScrollTo = document.querySelector('.btn--scroll-to');
 const section1 = document.querySelector('#section--1');
 
@@ -238,7 +238,7 @@ setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
 // LINK <a class="nav__link" href="#section--1" style="background-color: rgb(196, 101, 11);">Features</a>
 // LINK <a class="nav__link" href="#section--1" style="background-color: rgb(148, 234, 113);">Features</a>
 // LINK <a class="nav__link" href="#section--1" style="background-color: rgb(137, 11, 147);">Features</a>
-//e.currentTarget not the same and will be the elemnet on which the eventlistener to atatched to, like this keyword
+//e.currentTarget not the same and will be the element on which the eventlistener to atatched to, like this keyword
 
 //Capture phase: default behavior for events
 //if we want to catch events during the capturing phase we can define a 3rd parameter in the addEventListener function
@@ -249,7 +249,7 @@ setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
 //     this.style.backgroundColor = randomColor();
 //   },
 //   true
-// ); //set the 3rd parameter to true , the eventhandler not listening to the bubbling events, instead to capture events, in practice looks the same but in the console we can see the nav is the first appearing, capturing rarely used nowdays
+// ); //set the 3rd parameter to true , the eventhandler not listening to the bubbling events, instead to the capture events, in practice looks the same but in the console we can see the nav is the first appearing, capturing rarely used nowdays
 
 //EVENT DELEGATION: IMPLEMENTING PAGE NAVIGATION SMOOTHLY
 //page navigation
@@ -258,7 +258,7 @@ setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
 //   el.addEventListener('click', function (e) {
 //     console.log('LINK');
 //     e.preventDefault(); //now we prevent to scroll down when we clicking each of the nav link
-//     const id = this.getAttribute('href'); //have to select href to be able to use smmoth scroll trough the href link
+//     const id = this.getAttribute('href'); //have to select href to be able to use smooth scroll through the href link
 //     console.log(id); //getting back section-1 2 or 3 depends which one we click
 //     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
 //   });
@@ -286,14 +286,14 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
 });
 
 //DOM TRAVERSING
-//basically walking trough the DOM, which means that we can select an element based on an other element
+//basically walking through the DOM, which means that we can select an element based on an other element
 //going downwards: (child)
 console.log(h1.querySelectorAll('.highlight'));
 //for direct children:
 console.log(h1.childNodes);
 console.log(h1.children); //gives us an HTML collection
 //first and last element child
-h1.firstElementChild.style.color = 'white'; //banking word bwcome white
+h1.firstElementChild.style.color = 'white'; //banking word become white
 h1.lastElementChild.style.color = 'orangered'; //minimalist word become orangered
 
 //going upwords: parents
@@ -332,7 +332,7 @@ const tabsContent = document.querySelectorAll('.operations__content');
 tabsContainer.addEventListener('click', function (e) {
   const clicked = e.target.closest('.operations__tab');
   console.log('CLOSEST: ', e.target.closest('.operations__tab'));
-  console.log(clicked); //so we get which button we get
+  console.log(clicked); //so we get which button we clicked
   //need to fix when we click the tabs container we get null as there is no parent element so we need to ignore any clicks where the result is 0, this is:
   //guard clause: an if statement which will return early if some condition is matched
   if (!clicked) return; //if no click return back to the function
@@ -358,7 +358,7 @@ tabsContainer.addEventListener('click', function (e) {
 const handleHover = function (e) {
   if (e.target.classList.contains('nav__link')) {
     const link = e.target;
-    //need to sleect sibling elements, so all the other link
+    //need to select sibling elements, so all the other link
     const siblings = link.closest('.nav').querySelectorAll('.nav__link');
     const logo = link.closest('.nav').querySelector('img');
     siblings.forEach(el => {
@@ -406,7 +406,7 @@ const obsCallback = function (entries, observer) {
 };
 const obsOptions = {
   root: null, //the root is the element that the target is intersecting(atmetsz), if null we looking at the viewport
-  threshold: [0, 0.2], //the percentage of intersection at which the observercallback will be called, 0% means that our callback will trigger(kivalt, eloidez) each time that the target elements moves completly out or enters the view, if it would be 1: means 100% so the callback will only be called when 100% the target will be visible in the viewport
+  threshold: [0, 0.2], //the percentage of intersection at which the observercallback will be called, 0% means that our callback will trigger(kivalt, eloidez) each time that the target elements moves completaly out or enters the view, if it would be 1: means 100% so the callback will only be called when 100% the target will be visible in the viewport
 };
 const observer = new IntersectionObserver(obsCallback, obsOptions); //first parameter is the callback, second is the options(we can write the options inside here as well)
 // //observe a certain target
@@ -438,7 +438,7 @@ headerObserver.observe(header);
 //adding .section-hidden css class to all section in hml, so they gonna be invisible, but we can do this by writing code and not manually
 //so our job to remove these calsses as we approach each sections
 
-//Rrveal sections
+//Revael sections
 const allSections = document.querySelectorAll('.section');
 console.log('ALLSECTION', allSections);
 const revealSection = function (entries, observer) {
@@ -462,10 +462,10 @@ allSections.forEach(function (section) {
 });
 
 //LAZY LOADING IMAGES
-//ON WEBSITES THE PERFORMANCE IS REALLY IMPORTANS, SO DOES HOW IMAGES LOADING
-//the idea when we scroll we will replace the low resolution images to a digital one (low res images are in src in html, bigger sized images in data-src underneath) and we are planning to remove thelazy-img class as well when we scroll to that point as this class kind of behaving like a blurr filter
+//ON WEBSITES THE PERFORMANCE IS REALLY IMPORTANt, SO DOES HOW IMAGES LOADING
+//the idea when we scroll we will replace the low resolution images to a digital one (low res images are in src in html, bigger sized images in data-src underneath) and we are planning to remove the lazy-img class as well when we scroll to that point as this class kind of behaving like a blur filter
 
-//not all img will be lazy loaded so we dont need to select allof them
+//not all img will be lazy loaded so we dont need to select all of them
 const imgTargets = document.querySelectorAll('img[data-src]');
 console.log(imgTargets);
 const loadinImg = function (entries, observer) {
@@ -474,7 +474,7 @@ const loadinImg = function (entries, observer) {
   if (!entry.isIntersecting) return;
   //Replace src attribute with data.src (replace the img with that we want)
   entry.target.src = entry.target.dataset.src;
-  //remove the blury image (only will disspaear once the loading of the img finished)
+  //remove the blury image (only will disappaear once the loading of the img finished)
   entry.addEventListener('load', function () {
     entry.target.classList.remove('lazy-img');
   });
