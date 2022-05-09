@@ -4,16 +4,14 @@
 
 document.addEventListener('DOMContentLoaded', function (e) {
   console.log('HTML parsed and DOM tree filled', e);
-}); //we get this event in teh console
+}); //we get this event in the console
 
-//Load event: fired by the window not when the HTML parsed, all the img-es and external resourses
-window.addEventListener;
-'load',
-  function (e) {
-    console.log('Page fully loaded', e);
-  };
+//Load event: fired by the window not just when the HTML parsed, all the img-es and external resourses
+window.addEventListener('load', function (e) {
+  console.log('Page fully loaded', e);
+});
 
-//Before Unload Ebent: also gets fired on window, created immediately before the user is about to leave the page, it is good to use to ask users if they 100% sure they want to leave teh page, so a window will pop up
+//Before Unload Event: also gets fired on window, created immediately before the user is about to leave the page, it is good to use to ask users if they 100% sure they want to leave teh page, so a window will pop up
 window.addEventListener('beforeunload', function (e) {
   e.preventDefault();
   console.log(e);
@@ -24,7 +22,7 @@ window.addEventListener('beforeunload', function (e) {
 //EFFICIENT SCRIPT LOADING: DEFER AND ASYNC
 //Up until now we just used the normal script tag for js in HTML but we can add the defer or async attributes to it:
 //this will influence the way how the js will be fetched, and than executed
-//we can writhe the js scrip in HTML in the head or end of the body:
+//we can write the js scrip in HTML in the head or end of the body:
 //all because of page loading process
 
 //                                                  //HEAD                                                                BODY END

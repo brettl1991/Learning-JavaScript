@@ -29,6 +29,7 @@ const slider = function () {
   // goToSlide(0);
   //going to the next slide (active 0%, previous -100%, next one is 100%)
   const nextSlide = function () {
+    //to achive after last one goes back to original condition
     if (currentSlide === maxSlide - 1) {
       currentSlide = 0;
     } else {
@@ -41,6 +42,7 @@ const slider = function () {
 
   const prevSlide = function () {
     if (currentSlide === 0) {
+      //so goes to last side with this if cur is 0
       currentSlide = maxSlide - 1;
     } else {
       currentSlide--;
