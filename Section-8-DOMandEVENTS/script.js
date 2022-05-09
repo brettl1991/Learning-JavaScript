@@ -31,7 +31,7 @@ document.addEventListener('keydown', function (e) {
 });
 
 //selecting elements
-console.log(document.documentElement); //in the DOM the entire html elemnet selected by the console
+console.log(document.documentElement); //in the DOM the entire html element selected by the console
 console.log(document.head);
 console.log(document.body);
 
