@@ -40,7 +40,7 @@ Person.prototype.calcAge = function () {
 };
 
 jonas.calcAge(); //46
-
+//we can call this calcAge() method on all the Person obj without the method being directly attached to all the object themself
 //prototype of jonas obj, it's basically the prototype of construction func
 //.__proto__ always points to an object's prototype
 console.log(jonas.__proto__); //{ calcAge: [Function (anonymous)] }
