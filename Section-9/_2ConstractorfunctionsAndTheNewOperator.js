@@ -53,3 +53,5 @@ Person.prototype.speceis = 'Homo Sapiens';
 console.log(jonas.speceis, matilda.speceis); //Homo Sapiens Homo Sapiens
 console.log(jonas.hasOwnProperty('firstName')); //true
 console.log(jonas.hasOwnProperty('speceis')); //false as this property not in the jonas obj, because it is a prototype of Person
+
+//the prototype chain similar like scope chain but instead working with properties and methods, basically links between objects, linked through prototypes
