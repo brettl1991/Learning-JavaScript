@@ -28,6 +28,6 @@ console.log(jonas); //Person { firstName: 'Jonas', birthYear: 1991 }
 const matilda = new Person('Matilda', 2017);
 const jack = new Person('Jack', 1975);
 console.log(matilda, jack);
-//we did crete objects from construction func
+//we did create objects from construction func
 //so jonas matilda and jack are instances for person, and there is an operator we can test this
 console.log(jonas instanceof Person); //true
