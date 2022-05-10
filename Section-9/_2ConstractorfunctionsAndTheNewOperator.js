@@ -55,3 +55,26 @@ console.log(jonas.hasOwnProperty('firstName')); //true
 console.log(jonas.hasOwnProperty('speceis')); //false as this property not in the jonas obj, because it is a prototype of Person
 
 //the prototype chain similar like scope chain but instead working with properties and methods, basically links between objects, linked through prototypes
+
+//PROTOTYPAL INHERITANCE IN BUILT-IN OBJECTS
+//a  func also an object so has prototype
+console.log(jonas.__proto__); //{ calcAge: [Function (anonymous)], speceis: 'Homo Sapiens' }
+//this is the prototype of jonas which is the prototype property of Person
+//Top of the prototype chain
+console.log(jonas.__proto__.__proto__); //[Object: null prototype] {}, the prototype property of Object
+console.log(jonas.__proto__.__proto__.__proto__); //null
+
+console.dir(Person.prototype.constructor); //we get back the function itself pointing to Person
+
+const arr = [3, 6, 6, 5, 6, 9, 9]; //new Array = []
+console.log(arr.__proto__); //Object(0) [] in console contai all of the methods
+console.log(arr.__proto__ === Array.prototype); //true
+
+Array.prototype.unique = function () {
+  return [...new Set(this)];
+};
+
+console.log(arr.unique()); //[ 3, 6, 5, 9 ]
+
+const h1 = document.querySelector('h1');
+console.dir(h1);
