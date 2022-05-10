@@ -31,3 +31,24 @@ console.log(matilda, jack);
 //we did create objects from construction func
 //so jonas matilda and jack are instances for person, and there is an operator we can test this
 console.log(jonas instanceof Person); //true
+
+//PROTOTYPES
+//each and every function in js has a property called prototype
+console.log(Person.prototype); // {}
+Person.prototype.calcAge = function () {
+  console.log(2037 - this.birthYear);
+};
+
+jonas.calcAge(); //46
+
+//prototype of jonas obj, it's basically the prototype of construction func
+console.log(jonas.__proto__); //{ calcAge: [Function (anonymous)] }
+console.log(jonas.__proto__ === Person.prototype); //true, so sets the proto property on the object to the prototype property of the construction function
+console.log(Person.prototype.isPrototypeOf(jonas)); //true
+console.log(Person.prototype.isPrototypeOf(Person)); //false
+
+//we can also set properties on prototype and not just methods
+Person.prototype.speceis = 'Homo Sapiens';
+console.log(jonas.speceis, matilda.speceis); //Homo Sapiens Homo Sapiens
+console.log(jonas.hasOwnProperty('firstName')); //true
+console.log(jonas.hasOwnProperty('speceis')); //false as this property not in the jonas obj, because it is a prototype of Person
