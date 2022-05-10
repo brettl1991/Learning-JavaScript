@@ -24,7 +24,7 @@ console.log(jonas); //Person { firstName: 'Jonas', birthYear: 1991 }
 //3. this newly created object is linked to a prototype
 //4. the object that was created in the beginning is then automatically returned from a constructor function, but the object no longer needs to be empty
 
-//so the Person contruction func  is kind of a blueprint for a house and all the new created objects creted through that const func are the actua house
+//so the Person contruction func  is kind of a blueprint for a house and all the new created objects creted through that const func are the actual house
 const matilda = new Person('Matilda', 2017);
 const jack = new Person('Jack', 1975);
 console.log(matilda, jack);
