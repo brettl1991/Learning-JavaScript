@@ -42,6 +42,7 @@ Person.prototype.calcAge = function () {
 jonas.calcAge(); //46
 
 //prototype of jonas obj, it's basically the prototype of construction func
+//.__proto__ always points to an object's prototype
 console.log(jonas.__proto__); //{ calcAge: [Function (anonymous)] }
 console.log(jonas.__proto__ === Person.prototype); //true, so sets the proto property on the object to the prototype property of the construction function
 console.log(Person.prototype.isPrototypeOf(jonas)); //true
