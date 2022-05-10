@@ -1,6 +1,6 @@
 'use strict';
 //
-// only difference between a construction func and normal func is that with const func with the new operator, always starts with a capital letter
+// only difference between a construction func and normal func is that const func with the new operator, always starts with a capital letter
 //we can not use arrow function as func declaration here as that does not have this keyword and we need
 const Person = function (firstName, birthYear) {
   console.log(this); //Person {}
