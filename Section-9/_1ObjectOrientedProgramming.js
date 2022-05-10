@@ -13,7 +13,7 @@
 //Prototypal inheritence: the prototype contains methods(behavior) that are accessible to all object linked to that prototype. So basically an instance inheriting from a class!!! Behavior is delegated to the linked prototype object.
 
 //3 ways of implementing prototypal inheritance in js:
-//1. constructor function: technique to create objects from a function, this is how buyil-in objects, like arrays, maps or sets are implemented.
+//1. constructor function: technique to create objects from a function, this is how built-in objects, like arrays, maps or sets are implemented.
 //2. ES6 classes: modern alternative."Syntetic sugar": behind the scenes, ES6 calasses work like constructor functions. They do not behave like classes like in "classical" OOP.
 //3. Object.create(): easisest and most straightforward way of linking an object to a prototype object.
 //the 4 OOP pillars are still valid here!!!
