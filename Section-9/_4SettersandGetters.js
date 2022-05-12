@@ -36,7 +36,7 @@ class PersonCl {
   set fullName(name) {
     console.log(name);
     if (name.includes('')) this._fullName = name;
-    //_ is just a convention to avoide variable conflict between fullName-s, basically we are creating a new fullName variable, but with this jessica.fullName will be undefined so wee need now a getter as well
+    //_ is just a convention to avoide variable conflict between fullName-s, basically we are creating a new fullName variable, but with this jessica.fullName will be undefined so we need now a getter as well
     else alert(`${name} is not a full name.`);
   }
   get fullName() {
