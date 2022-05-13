@@ -43,4 +43,4 @@ EV.prototype.accelerate = function () {
 //4.
 
 tesla.brake();
-tesla.accelerate(); //Tesla going at 135km/h, with a charge of 89%
+tesla.accelerate(); //Tesla going at 135km/h, with a charge of 89%.
