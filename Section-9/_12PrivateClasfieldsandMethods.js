@@ -33,16 +33,19 @@ class Account {
 
   deposit(value) {
     this._movements.push(value);
+    return this;
   }
 
   withdraw(value) {
     this.deposit(-value);
+    return this;
   }
 
   requestLoan(value) {
     if (this.approveLoan(value)) {
       this.deposit(value);
       console.log(`Loan approved`);
+      return this;
     }
   }
 
@@ -62,3 +65,8 @@ acc1.requestLoan(1000);
 // console.log(acc1.#movements); //we get syntacs error because of privacy
 // console.log(acc1.#pin);//same as above, because of privacy
 // console.log(acc1.#approveLoan(100)); //same as above
+
+//CHAINING METHODS
+//we just need to return the object itself at the end of the method we want to be chainable
+acc1.deposit(300).deposit(500).withdraw(35).requestLoan(25000).withdraw(4000); //to be able to access this we need to write return this by deposit, withdraw and requestLoan
+console.log(acc1.getMovements()); //all from above here
