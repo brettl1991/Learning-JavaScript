@@ -44,7 +44,7 @@ class StudentCl extends PersonCl {
     console.log(`My name is ${this.fullName} and I study ${this.course}`);
   }
 
-  //overwrite clcage method
+  //overwrite calcage method
   calcAge() {
     console.log(
       `I am ${

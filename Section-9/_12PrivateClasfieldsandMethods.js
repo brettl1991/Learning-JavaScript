@@ -1,12 +1,12 @@
 'use strict';
 //they are part of classfields proposal (at stage 3 in js so not publicated yet)
-//properties means in class fields fields
+//properties means in class fields
 //Public fields(public instance fields)
 //Private fields
 //Public methods
 //Private methods
 
-//there is also static versions of the above by adding static keyword in front of it, and works just on the main class
+//there is also static versions of the aboves by adding static keyword in front of it, and works just on the main class
 
 class Account {
   //1. defining public fields (instances)

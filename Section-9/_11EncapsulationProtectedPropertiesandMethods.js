@@ -1,5 +1,5 @@
 'use strict';
-//encapsualtion meand to keep some properties and methods private inside the class, the the rest of the methods are exposed to a public interface (API)
+//encapsualtion means to keep some properties and methods private inside the class, the rest of the methods are exposed to a public interface (API)
 //Reasons we need encapsulation:
 //1.Prevent code from outside of the class to accidentaly manipulate the data inside the class
 //2. When we expose only a small interface, we can change all the other internal methods with more confidence, our code will not brake when we make internal changes

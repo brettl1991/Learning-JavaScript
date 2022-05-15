@@ -21,11 +21,11 @@ StudentProto.init = function (firstName, birthYear, course) {
 };
 
 StudentProto.introduce = function () {
-  console.log(`My name is ${this.fullName} and I study ${this.course}`);
+  console.log(`My name is ${this.firstName} and I study ${this.course}`);
 };
 
 const jay = Object.create(StudentProto); //so now studentproto is the prototype of jay, so personproto is a parent prototype of jay
 jay.init('Jay', 2010, 'Computer science');
 console.log(jay); //{ firstName: 'Jay', birthYear: 2010, course: 'Computer science' }
-jay.introduce(); //My name is undefined and I study Computer science
+jay.introduce(); //My name is Jay and I study Computer science
 jay.calcAge(); //27
