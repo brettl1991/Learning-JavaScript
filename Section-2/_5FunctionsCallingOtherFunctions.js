@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 //Using for many reason, mostly for DRY code!!!
 
@@ -6,7 +6,7 @@
 function cutFruitPieces(fruit) {
   return fruit * 4;
 }
-//we will use the above machine in our function below, so we call one function inside an other function
+//we will use the above machine in our function below, so basically we call one function inside an other function
 function fruitProcessor(apples, oranges) {
   const applePieces = cutFruitPieces(apples);
   const orangePieces = cutFruitPieces(oranges);
