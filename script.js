@@ -19,3 +19,18 @@ const currentUsers = [...initialUsers];
 currentUsers.push('Florin Pop', 'Net Ninja');
 console.log(initialUsers); //[ 'john', 'traversy', 'ed' ] and this is the right as we dont want the original to be modified
 console.log(currentUsers);
+
+// ---
+//In react we using arrow functions
+// const sayHello = name => {
+//   console.log(`Hey ${name}`);
+// };
+
+// sayHello('ed');
+//or we can return as well
+const sayHello = name => {
+  return `Hey ${name}`;
+}; //if we dont have code just simple return we can even leave the {} from the function
+
+const greeting = sayHello('ed');
+console.log(greeting);
